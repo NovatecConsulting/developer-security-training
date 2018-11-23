@@ -9,7 +9,7 @@ Try to find out the original password of MC SafeSearch's account.
 
 ### Tips:
 
-1. Tip: Have a look at Challenge 1.2 if you don't know the email.
+1. Tip: Have a look at [Challenge 1.2!](https://github.com/nt-ca-aqe/thesis-ahs/tree/master/Challenge%20Collection%202:%20Injection) if you don't know the email.
 
 2. Tip: The admin section of the juice shop could reveal sensitive data.
 
