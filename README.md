@@ -24,8 +24,8 @@ Follow the setup instructions on https://www.getpostman.com/apps.
 
 ## Useful links
 
-https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/ - Complete documentation about OWASP Juice Shop
+[Complete documentation about OWASP Juice Shop!](https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/)
 
-https://www.owasp.org/index.php/OWASP_Juice_Shop - The Page of the OWASP Juice Shop Project in The OWASP Foundation Wiki
+[The Page of the OWASP Juice Shop Project in The OWASP Foundation Wiki.!](https://www.owasp.org/index.php/OWASP_Juice_Shop)
 
-https://www.owasp.org/images/7/72/OWASP_Top_10-2017_%28en%29.pdf.pdf - The OWASP Top 10: Description of each application security risk in OWASP
+[The OWASP Top 10: Description of each application security risk in OWASP!](https://www.owasp.org/images/7/72/OWASP_Top_10-2017_%28en%29.pdf.pdf)

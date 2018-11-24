@@ -2,7 +2,8 @@
 
 ## Challenge 4.1: Log in with MC SafeSearch's original password (without SQL injection or changing password)
 
-Log in with your own account or with the administrator's account (if you know his password or know how to perform SQL injection). Browse to the admin section: 
+Log in with your own account or with the administrator's account (if you know his password or know how to perform SQL injection). Browse to the admin section: __
+
 ![4_1_1](screenshots/solution4_1_1.png)
 Click on the eye icon next to the email `mc.safesearch@juice-sh.op`.
 Open the console of the web development tool. You see the GET call `http://localhost:3000/api/Users/8`. Expand this call and open the tab `Response` in their:

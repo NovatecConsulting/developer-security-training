@@ -2,7 +2,7 @@
 
 ## Challenge 3.1: Log in with the original password of the administrator (without SQL injection or changing password)
 
-[Install OWASP ZAP.!](https://github.com/zaproxy/zaproxy/wiki/Downloads)
+[Install OWASP ZAP.](https://github.com/zaproxy/zaproxy/wiki/Downloads)
 
 Open OWASP ZAP. In the field `URL to attack`, fill in the URL of Juice Shop and click the `Launch Browser`-Button.
 ![3_1_1](screenshots/solution3_1_1.png)
