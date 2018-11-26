@@ -16,28 +16,29 @@ In this way, you cause a POST call on the REST API. Go back to OWASP ZAP and exp
 You will see, that the last POST call is monitored there. Right click the POST call and choose `Attack` --> `Fuzz...`:  
 ![3_1_4](screenshots/solution3_1_4.png)  
 
-In the window `Fuzzer`, mark the password (in this case `123`) that you have chosen for your login attempt as this is the parameter that should be replaced.  
+In the window `Fuzzer`, mark the password (in this case `123`) that you have chosen for your login attempt as this is the parameter that should be replaced. In the area "Fuzz Locations", click on `Add...`:  
 ![3_1_5](screenshots/solution3_1_5.png)  
 
-In the area "Fuzz Locations", click on `Add...`.  
+In the window "payloads", click again on `Add...`:  
 ![3_1_7](screenshots/solution3_1_7.png)  
 
-In the window "payloads", click again on `Add...`.  
+In the window "Add Payload", change the `Type` to file, click at `Select...` and choose a wordlist from your local drive:  
 ![3_1_8](screenshots/solution3_1_8.png)  
 
-In the window "Add Payload", change the `Type` to file, click at `Select...` and choose a wordlist from your local drive.  
+For example, you can get the file `darkweb2017-top10000` from https://github.com/danielmiessler/SecLists/tree/master/Passwords:  
 ![3_1_9](screenshots/solution3_1_9.png)  
 
-For example, you can get the file `darkweb2017-top10000` from https://github.com/danielmiessler/SecLists/tree/master/Passwords.
+
 After adding the file, you can see a preview of the words in your textfile:  
 ![3_1_10](screenshots/solution3_1_10.png)  
 
 Click on `Add` and confirm the `Payloads` window with `OK`.
-Your `Fuzzer` window shoulf look like this:  
+Your `Fuzzer` window should look like this:  
 ![3_1_11](screenshots/solution3_1_11.png)  
 
 Now, you are ready to click on `Start Fuzzer`.
 While Fuzzering, you will receive lots of passwords that lead to the status `Unauthorized`:  
 ![3_1_12](screenshots/solution3_1_12.png)  
 
-Sort after the column "Code" or `Reason` and you see a row with one `OK` result. The column `Payloads` presents the password for the email `admin@juice-sh.op`: `admin123`
+Sort after the column "Code" or `Reason` and you see a row with one `OK` result. The column `Payloads` presents the password for the email `admin@juice-sh.op`: `admin123`:  
+![3_1_13](screenshots/solution3_1_13.png)

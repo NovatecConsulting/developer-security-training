@@ -9,15 +9,15 @@ Provoke an error by crashing the application with the input `admin@juice-sh.op'`
 ![2_1_1](screenshots/solution2_1_1.png)  
 
 There occurs an error `[object Object]`. If you look at the console, you will recieve more information  
-![2_1_2](screenshots/solution2_1_2.png)`  
+![2_1_2](screenshots/solution2_1_2.png)  
 
-There you can recognize the underlying NoSQL-Query in the row `sql`: `SELECT * FROM Users WHERE email = 'admin@juice-sh.op'' AND password = '202cb962ac59075b964b07152d234b70'`. As a consequence of the two apostrophes following the email, the statement now is corrupted. The rest of the statement after the email can be commented out with two hyphen. So, the password won't be compared with the entry in the database.  
+There you can recognize the underlying NoSQL-Query in the row `sql`: `SELECT * FROM Users WHERE email = 'admin@juice-sh.op'' AND password = '202cb962ac59075b964b07152d234b70'`. As a consequence of the two apostrophes following the email, the statement now is corrupted. The rest of the statement after the email can be commented out with two hyphen `--`. So, the password won't be compared with the entry in the database.  
 ![2_1_3](screenshots/solution2_1_3.png)  
 With `admin@juice-sh.op'--` as input and any password, you can access the administrator's account.
 
 ### Variant 2: Scanning the juice shop with OWASP ZAP
 
-[Install OWASP ZAP.!](https://github.com/zaproxy/zaproxy/wiki/Downloads)
+[Install OWASP ZAP.](https://github.com/zaproxy/zaproxy/wiki/Downloads)  
 Open OWASP ZAP. In the field `URL to attack`, fill in the URL of Juice Shop and click the `Launch Browser`-Button.  
 ![2_1_4](screenshots/solution2_1_4.png)  
 

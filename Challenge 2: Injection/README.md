@@ -9,11 +9,11 @@ Get access to the account of the administrator.
 
 ### Tips:
 
-1. Tip: Have a look at Challenge 1.2 if you don't know the email.
+1. Tip: Have a look at [Challenge 1.2](https://github.com/nt-ca-aqe/thesis-ahs/tree/master/Challenge%201:%20Broken%20Access%20Control#challenge-12-find-the-admin-page) if you don't know the email.
 
-2. Tip: You don't need the password to solve the challenge.
+2. Tip: You don't need the matching password to solve the challenge.
 
-3. Tip: Try to corrupt the underlying NoSQL-Query by inserting invalid input. For example, an apostrophe ' might help.
+3. Tip: Try to corrupt the underlying NoSQL-Query by inserting invalid input. For example, an apostrophe `'` might help.
 
 4. Tip: Have a look at the web development tool.
 
