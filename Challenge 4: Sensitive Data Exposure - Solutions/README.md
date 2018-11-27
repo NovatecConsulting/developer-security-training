@@ -41,7 +41,7 @@ Open `acquisitions-md` to solve the challenge.
 
 ### Variant 2: Searching after security lacks in the user interface of the Juice Shop
 
-Browse to the `About Us` section of the Juice Shop: http://localhost:3000/#/about
+Browse to the `About Us` section of the Juice Shop: http://localhost:3000/#/about  
 You will see that there is a more or less hidden link:
 ![4_2_4](screenshots/solution4_2_4.png)  
 

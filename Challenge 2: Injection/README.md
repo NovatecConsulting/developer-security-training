@@ -37,7 +37,7 @@ Modify multiple product reviews at once by changing the text of all reviews to `
 
 ### Tips: 
 
-1. Tip: The process of [Challenge 2.2]() might help you.
+1. Tip: The process of [Challenge 2.2](https://github.com/nt-ca-aqe/thesis-ahs/tree/master/Challenge%202:%20Injection#challenge-22-modify-a-product-review) might help you.
 
 2. Tip: You need to use a query operator to solve this challenge.
 
@@ -47,6 +47,6 @@ Try to lead the server to sleep for 2 seconds.
 
 ### Tips:
 
-1. Tip: Find a way to interact with the API. [Challenge 2.2]() and [challenge 2.3]() might reveal a possibility where you can exploit a parameter.
+1. Tip: Find a way to interact with the API. [Challenge 2.2](https://github.com/nt-ca-aqe/thesis-ahs/tree/master/Challenge%202:%20Injection#challenge-22-modify-a-product-review) and [challenge 2.3](https://github.com/nt-ca-aqe/thesis-ahs/tree/master/Challenge%202:%20Injection#challenge-23-modify-multiple-product-reviews-at-once) might reveal a possibility where you can exploit a parameter.
 
 2. Tip: You need to inject a sleep function as a parameter.

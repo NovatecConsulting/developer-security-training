@@ -63,7 +63,6 @@ Adjust the message to `Juice Shop has been hacked!`, make sure you have selected
 A look at several products shows that reviews from different users has changed to the wanted message:  
 
 ![2_3_2](screenshots/solution2_3_2.png)  
-
 ![2_3_3](screenshots/solution2_3_3.png)  
 
 
@@ -71,7 +70,7 @@ A look at several products shows that reviews from different users has changed t
 
 Open any product information while observing the console of the web development tool. You see the GET call `http://localhost:3000/rest/product/1/reviews`, which holds an opportunity for injecting the sleep function:  
 
-![2_2_1](screenshots/solution2_2_1.png)  
+![2_4_1](screenshots/solution2_4_1.png)  
 
 Call `http://localhost:3000/rest/product/sleep(2000)/reviews`. You see that the browser will load longer before showing this JSON response:  
 ![2_4_2](screenshots/solution2_4_2.png)
