@@ -1,5 +1,12 @@
 # Challenge Collection 4: Sensitive Data Exposure - Solutions
 
+   * [Challenge Collection 4: Sensitive Data Exposure - Solutions](#challenge-collection-4-sensitive-data-exposure---solutions)
+      * [Challenge 4.1: Log in with MC SafeSearch's original password (without SQL injection or changing password)](#challenge-41-log-in-with-mc-safesearchs-original-password-without-sql-injection-or-changing-password)
+         * [Additional information:](#additional-information)
+      * [Challenge 4.2: Find and open a confidential document](#challenge-42-find-and-open-a-confidential-document)
+         * [Variant 1: Scanning the Juice Shop with OWASP ZAP](#variant-1-scanning-the-juice-shop-with-owasp-zap)
+         * [Variant 2: Searching after security lacks in the user interface of the Juice Shop](#variant-2-searching-after-security-lacks-in-the-user-interface-of-the-juice-shop)
+
 ## Challenge 4.1: Log in with MC SafeSearch's original password (without SQL injection or changing password)
 
 Log in with your own account or with the administrator's account (if you know his password or know how to perform SQL injection). Browse to the admin section:  
