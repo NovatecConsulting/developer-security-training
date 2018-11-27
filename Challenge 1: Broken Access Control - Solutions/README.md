@@ -1,11 +1,10 @@
 # Challenge Collection 1: Broken Access Control - Solutions
 
-   * [Challenge Collection 1: Broken Access Control - Solutions](#challenge-collection-1-broken-access-control---solutions)
-      * [Challenge 1.1: Find the Score Board with the challenge overview](#challenge-11-find-the-score-board-with-the-challenge-overview)
-      * [Challenge 1.2: Find the Admin Page](#challenge-12-find-the-admin-page)
-      * [Challenge 1.3: Make sure that the shop loses all 5-Star ratings](#challenge-13-make-sure-that-the-shop-loses-all-5-star-ratings)
-      * [Challenge 1.4: Show the basket of another user](#challenge-14-show-the-basket-of-another-user)
-      * [Challenge 1.5: Write a comment in the name of another user:](#challenge-15-write-a-comment-in-the-name-of-another-user)
+   * [Challenge 1.1: Find the Score Board with the challenge overview](#challenge-11-find-the-score-board-with-the-challenge-overview)
+   * [Challenge 1.2: Find the Admin Page](#challenge-12-find-the-admin-page)
+   * [Challenge 1.3: Make sure that the shop loses all 5-Star ratings](#challenge-13-make-sure-that-the-shop-loses-all-5-star-ratings)
+   * [Challenge 1.4: Show the basket of another user](#challenge-14-show-the-basket-of-another-user)
+   * [Challenge 1.5: Write a comment in the name of another user:](#challenge-15-write-a-comment-in-the-name-of-another-user)
 
 ## Challenge 1.1: Find the Score Board with the challenge overview
 
