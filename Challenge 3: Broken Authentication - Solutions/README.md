@@ -2,7 +2,7 @@
 
 ## Challenge 3.1: Log in with the original password of the administrator (without SQL injection or changing password)
 
-[Install OWASP ZAP.](https://github.com/zaproxy/zaproxy/wiki/Downloads)
+[Install OWASP ZAP](https://github.com/zaproxy/zaproxy/wiki/Downloads).
 
 Open OWASP ZAP. In the field `URL to attack`, fill in the URL of Juice Shop and click the `Launch Browser`-Button.  
 ![3_1_1](screenshots/solution3_1_1.png)  
@@ -16,7 +16,7 @@ In this way, you cause a POST call on the REST API. Go back to OWASP ZAP and exp
 You will see, that the last POST call is monitored there. Right click the POST call and choose `Attack` --> `Fuzz...`:  
 ![3_1_4](screenshots/solution3_1_4.png)  
 
-In the window `Fuzzer`, mark the password (in this case `123`) that you have chosen for your login attempt as this is the parameter that should be replaced. In the area "Fuzz Locations", click on `Add...`:  
+In the window `Fuzzer`, mark the password (in this case `123`) that you have chosen for your login attempt as this is the parameter that should be replaced. In the area `Fuzz Locations:`, click on `Add...`:  
 ![3_1_5](screenshots/solution3_1_5.png)  
 
 In the window "payloads", click again on `Add...`:  
@@ -40,5 +40,5 @@ Now, you are ready to click on `Start Fuzzer`.
 While Fuzzering, you will receive lots of passwords that lead to the status `Unauthorized`:  
 ![3_1_12](screenshots/solution3_1_12.png)  
 
-Sort after the column "Code" or `Reason` and you see a row with one `OK` result. The column `Payloads` presents the password for the email `admin@juice-sh.op`: `admin123`:  
+Sort after the column "Code" or `Reason` and you see a row with one `OK` result. The column `Payloads` presents the password for the email `admin@juice-sh.op`: `admin123`.  
 ![3_1_13](screenshots/solution3_1_13.png)

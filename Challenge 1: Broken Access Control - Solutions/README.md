@@ -24,7 +24,7 @@ Browse to http://localhost:3000/#/administration to explore the administration s
 
 ## Challenge 1.3: Make sure that the shop loses all 5-Star ratings
 
-After solving Challenge 1.2, go to the administration section. In the table "Customer Feedback", you have to delete the first entry of user `1` by clicking on the garbage can icon:
+After solving [Challenge 1.2](https://github.com/nt-ca-aqe/thesis-ahs/tree/master/Challenge%201:%20Broken%20Access%20Control#challenge-12-find-the-admin-page), go to the administration section. In the table `Customer Feedback`, you have to delete the first entry of user `1` by clicking on the garbage can icon:
 ![1_3](screenshots/solution1_3.png)  
 
 ## Challenge 1.4: Show the basket of another user
@@ -65,11 +65,11 @@ After editing the source, an input field appears above the `Author`:
 
 ![1_5_2](screenshots/solution1_5_2.png)  
 
-Fill in a `1` in this field, as the administrator of the juice shop has this UserId (You will know this fact if you have solved Challenge 1.4 before). Complete the remaining input fields and submit your comment:
+Fill in a `1` in this field, as the administrator of the juice shop has this UserId (You will know this fact if you have solved [Challenge 1.4](https://github.com/nt-ca-aqe/thesis-ahs/tree/master/Challenge%201:%20Broken%20Access%20Control%20-%20Solutions#challenge-14-show-the-basket-of-another-user) before). Complete the remaining input fields and submit your comment:
 
 ![1_5_3](screenshots/solution1_5_3.png)  
 
-To show the submitted comment, hae a look at the "Console" tab of the web development tool:
+To show the submitted comment, have a look at the `Console` tab of the web development tool:
 
 ![1_5_4](screenshots/solution1_5_4.png)  
 

@@ -17,9 +17,34 @@ You receive `Mr. N00dles` as passwort for MC SafeSearch's account.
 
 Now that you know the GET call for getting more user information, you have the opportunity to leak all user credentials. To do this, switch to the tab `Cookies` of the GET call.  
 ![4_1_4](screenshots/solution4_1_4.png)  
-Copy the token. You will need at for the authorization in Postman (if you haven't installed Postman yet, download [download!](https://www.getpostman.com/apps) it)
+Copy the token. You will need it for the authorization in [Postman](https://www.getpostman.com/apps).
 
 Open Postman. Insert `http://localhost:3000/api/Users` as GET call. Change the `TYPE` to `Bearer Token` and paste the token that you have copied before. Click on `Send`:  
 ![4_1_5](screenshots/solution4_1_5.png)  
 
 As result, all users of the juice shop are listed with their stored information including their password hashes.
+
+
+## Challenge 4.2: Find and open a confidential document
+
+### Variant 1: Scanning the Juice Shop with OWASP ZAP
+
+Start [OWASP ZAP](https://github.com/zaproxy/zaproxy/wiki/Downloads), fill in `http://localhost:3000` in the `Quick Start` tab and click on `Attack`
+![4_2_1](screenshots/solution4_2_1.png)  
+
+The scan shows you an area of the juice shop you have never seen before: `http://localhost:3000/ftp`
+![4_2_2](screenshots/solution4_2_2.png)  
+
+Visit this site:
+![4_2_3](screenshots/solution4_2_3.png)  
+Open `acquisitions-md` to solve the challenge.
+
+### Variant 2: Searching after security lacks in the user interface of the Juice Shop
+
+Browse to the `About Us` section of the Juice Shop: http://localhost:3000/#/about
+You will see that there is a more or less hidden link:
+![4_2_4](screenshots/solution4_2_4.png)  
+
+If you hover over the link, the `ftp` section will be revealed.
+
+

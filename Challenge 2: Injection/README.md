@@ -2,7 +2,7 @@
 
 *-- Introduction Text --*
 
-**HINT:** Make sure that you download OWASP ZAP from https://github.com/zaproxy/zaproxy/wiki/Downloads.
+**HINT:** Make sure that you download [OWASP ZAP](https://github.com/zaproxy/zaproxy/wiki/Downloads) and [Postman](https://www.getpostman.com/apps).
 
 ## Challenge 2.1: Log in as administrator
 Get access to the account of the administrator.
@@ -18,10 +18,35 @@ Get access to the account of the administrator.
 4. Tip: Have a look at the web development tool.
 
 
-## Challenge 2.2: Cause the server of the juice shop to sleep
-Try to lead the server to sleep for a certain amount of seconds.
+## Challenge 2.2: Modify a product review
+
+Modify the product reviews of the product `Apple Juice (1000 ml)` without being logged in the administrator account.  
+Change the first review with the text `One of my favorites!` written by `admin@juice-sh.op` to `Apple Juice has been hacked!` and manipulate the author so that Jim's email appears.
 
 ### Tips:
 
-*-- TODO --*
+1. Tip: Inspect the HTTP calls while opening a product review.
 
+2. Tip: Find out, which parameters you have to manipulate. Postman will help you with modifying these parameters.
+
+3. Tip: You have to slightly change the GET call that you have observed in your console.
+
+
+## Challenge 2.3: Modify multiple product reviews at once
+Modify multiple product reviews at once by changing the text of all reviews to `Juice Shop has been hacked!`.
+
+### Tips: 
+
+1. Tip: The process of [Challenge 2.2]() might help you.
+
+2. Tip: You need to use a query operator to solve this challenge.
+
+
+## Challenge 2.4: Cause the server of the juice shop to sleep for 2 seconds
+Try to lead the server to sleep for 2 seconds.
+
+### Tips:
+
+1. Tip: Find a way to interact with the API. [Challenge 2.2]() and [challenge 2.3]() might reveal a possibility where you can exploit a parameter.
+
+2. Tip: You need to inject a sleep function as a parameter.

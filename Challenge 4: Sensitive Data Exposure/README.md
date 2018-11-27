@@ -2,7 +2,7 @@
 
 *--INTRODUCTION TEXT--*
 
-**HINT:** [Install Postman](https://www.getpostman.com/apps) if you haven't done yet.
+**HINT:** [Install Postman](https://www.getpostman.com/apps) and [OWASP ZAP](https://github.com/zaproxy/zaproxy/wiki/Downloads) if you haven't done yet.
 
 ## Challenge 4.1: Log in with MC SafeSearch's original password (without SQL injection or changing password)
 Try to find out the original password of MC SafeSearch's account.
@@ -16,3 +16,14 @@ Try to find out the original password of MC SafeSearch's account.
 3. Tip: The web development tool of your browser will help you.
 
 4. Tip: Observe the HTTP calls while interacting with the admin section.
+
+
+## Challenge 4.2: Find and open a confidential document
+
+### Tips:
+
+1. Tip: A scan of the Juice Shop by [OWASP ZAP](https://github.com/zaproxy/zaproxy/wiki/Downloads) might help you.
+
+2. Tip: Search after hidden links to areas you haven't seen before (with OWASP ZAP or in the user interface).
+
+3. Tip: Inspect the `About Us` section.
