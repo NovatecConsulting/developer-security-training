@@ -13,6 +13,8 @@
       * [Tips:](#tips-3)
    * [Challenge 1.5: Write a comment in the name of another user:](#challenge-15-write-a-comment-in-the-name-of-another-user)
       * [Tips:](#tips-4)
+   * [Challenge 1.6: Change the description of the product OWASP SSL Advanced Forensic Tool (O-Saft)](#challenge-16-change-the-description-of-the-product-owasp-ssl-advanced-forensic-tool-o-saft)
+      * [Tips:](#tips-5)
 
 ## Prepare for the challenges:
 Before starting the first challenge, try to become familiar with the OWASP Juice Shop. Try out the functionalities in the menu bar like the "Contact Us"-Button or the "Search"-Field, have a look at the Login Site and create an account in the Juice Shop. After you have done the user registration, there might be several new functions as a logged in user which you should also try out. 
@@ -76,3 +78,10 @@ Chrome Users: The tab `Elements` might help you.
 3. **Tip:** Search in the source after hidden input fields.
 
 4. **Tip:** Think about a certain attribute you have to change in the database for modifying the author of the written comment. A search in the sources after the name of this attribute might help you.
+
+
+## Challenge 1.6: Change the description of the product OWASP SSL Advanced Forensic Tool (O-Saft)
+Replace the description of the product OWASP SSL Advanced Forensic Tool (O-Saft). The description should ony consist of the word `More...`, whichs links to `http://kimminich.de` (the developer of the OWASP Juice Shop).
+
+### Tips:
+

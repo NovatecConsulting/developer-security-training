@@ -8,6 +8,10 @@ Broken Authentication is the consequence of programming flaws in session managem
       * [Tips:](#tips-1)
    * [Challenge 3.3: Take over the session of a previously logged in user](#challenge-33-take-over-the-session-of-a-previously-logged-in-user)
       * [Tips:](#tips-2)
+   * [Challenge 3.4: Change the password of the user account of Bender](#challenge-34-change-the-password-of-the-user-account-of-bender)
+      * [Tips:](#tips-3)
+   * [Challenge 3.5: Log in with the user account of Bender](#challenge-35-log-in-with-the-user-account-of-bender)
+      * [Tips:](#tips-4)
 
 **HINT:** Make sure that you download [Postman](https://www.getpostman.com/apps).
 
@@ -45,4 +49,15 @@ Switch to the session of a previously logged in user without reusing his user cr
 3. **Tip:** Have a look at the tab `Storage`.
 
 4. **Tip:** Log in while observing the tab `Storage`.
+
+
+## Challenge 3.4: Change the password of the user account of Bender
+
+### Tips:
+
+
+## Challenge 3.5: Log in with the user account of Bender
+
+### Tips:
+
 

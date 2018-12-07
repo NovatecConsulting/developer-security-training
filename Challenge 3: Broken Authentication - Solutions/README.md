@@ -3,6 +3,8 @@
    * [Challenge 3.1: Brute-force attack](#challenge-31-brute-force-attack)
    * [Challenge 3.2: Create an administrator account](#challenge-32-create-an-administrator-account)
    * [Challenge 3.3: Take over the session of a previously logged in user](#challenge-33-take-over-the-session-of-a-previously-logged-in-user)
+   * [Challenge 3.4: Change the password of the user account of Bender](#challenge-34-change-the-password-of-the-user-account-of-bender)
+   * [Challenge 3.5: Log in with the user account of Bender](#challenge-35-log-in-with-the-user-account-of-bender)
 
 ## Challenge 3.1: Brute-force attack
 
@@ -75,4 +77,10 @@ As you can see at the top, the currently active session is `testuser@juice-sh.op
 
 ![3_3_4](screenshots/solution3_3_4.png)  
 As you now see at the top, the session of `admin@juice-sh.op` has been restored without using the user credentials.
+
+
+## Challenge 3.4: Change the password of the user account of Bender
+
+
+## Challenge 3.5: Log in with the user account of Bender
 

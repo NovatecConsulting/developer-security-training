@@ -5,6 +5,7 @@
    * [Challenge 1.3: Make sure that the shop loses all 5-Star ratings](#challenge-13-make-sure-that-the-shop-loses-all-5-star-ratings)
    * [Challenge 1.4: Show the basket of another user](#challenge-14-show-the-basket-of-another-user)
    * [Challenge 1.5: Write a comment in the name of another user:](#challenge-15-write-a-comment-in-the-name-of-another-user)
+   * [Challenge 1.6: Change the description of the product OWASP SSL Advanced Forensic Tool (O-Saft)](#challenge-16-change-the-description-of-the-product-owasp-ssl-advanced-forensic-tool-o-saft)
 
 ## Challenge 1.1: Find the Score Board with the challenge overview
 
@@ -82,4 +83,7 @@ To show the submitted comment, have a look at the `Console` tab of the web devel
 You recognize the POST call `http://localhost:3000/api/Feedbacks`. Type this in your browser and you will receive all entries in the `Contact us` section, including your comment in the bottom of the table with `UserId 1`:
 
 ![1_5_5](screenshots/solution1_5_5.png)  
+
+
+## Challenge 1.6: Change the description of the product OWASP SSL Advanced Forensic Tool (O-Saft)
 
