@@ -5,7 +5,9 @@ Broken Authentication is the consequence of programming flaws in session managem
    * [Challenge 3.1: Brute-force attack](#challenge-31-brute-force-attack)
       * [Tips:](#tips)
    * [Challenge 3.2: Create an administrator account](#challenge-32-create-an-administrator-account)
+      * [Tips:](#tips-1)
    * [Challenge 3.3: Take over the session of a previously logged in user](#challenge-33-take-over-the-session-of-a-previously-logged-in-user)
+      * [Tips:](#tips-2)
 
 **HINT:** Make sure that you download [Postman](https://www.getpostman.com/apps).
 
@@ -23,6 +25,8 @@ Log in with the original password of the administrator without SQL injection or 
 ## Challenge 3.2: Create an administrator account
 Create an account that has all administrator rights.
 
+### Tips:
+
 1. **Tip:** [Postman](https://www.getpostman.com/apps) could help you.
 
 2. **Tip:** Have a look at the GET-Requests in the console of the web development tool.
@@ -31,6 +35,8 @@ Create an account that has all administrator rights.
 
 ## Challenge 3.3: Take over the session of a previously logged in user
 Switch to the session of a previously logged in user without reusing his user credentials. You have to log in the user account that you want to attack at least one time. After a logout, you should try to return to this session without the login section.
+
+### Tips:
 
 1. **Tip:** Capture all GET- and POST-requests while logging in by ticking the `Persist Logs` option in the console of the web development tool or leaving the console open.
 
