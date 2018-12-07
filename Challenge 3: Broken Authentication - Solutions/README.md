@@ -51,7 +51,7 @@ Sort after the column "Code" or `Reason` and you see a row with one `OK` result.
 
 Install [Postman](https://www.getpostman.com/apps).  
 
-Log in with your own account or with the admins account (described in challenges [2.1](https://github.com/nt-ca-aqe/thesis-ahs/tree/master/Challenge%202:%20Injection#challenge-21-log-in-as-administrator) and [3.1](LINK)).
+Log in with your own account or with the admins account (described in challenges [2.1](https://github.com/nt-ca-aqe/thesis-ahs/tree/master/Challenge%202:%20Injection#challenge-21-log-in-as-administrator) and [3.1](https://github.com/nt-ca-aqe/thesis-ahs/tree/master/Challenge%203:%20Broken%20Authentication%20-%20Solutions#challenge-31-brute-force-attack)).
 Browse to http://localhost:3000/#/administration, open the console of the web development tool and click on any eye icon next to the emails.  
 ![3_2_1_2](screenshots/solution3_2_1_2.png)  
 In the console, you will see the GET-request `http://localhost:3000/api/Users/1` that reveals you an opportunity to interact with the API. Switch to tab `Response` to see the name of the parameters you have to pass:  
@@ -64,7 +64,7 @@ Open Postman. Fill in `http://localhost:3000/api/Users` (note, that you don't pa
 Make sure that the option `Persist Logs` is ticked in the console of the web development tool. So, you can browse through the Juice Shop without the need of having the web development tool open to capture the GET- and POST-requests.  
 ![3_3_1](screenshots/solution3_3_1.png)  
 
-In this case, the admin account with the email the email `admin@juice-sh.op` is the previously logged in user. Log in with his credentials (described in challenges [2.1](https://github.com/nt-ca-aqe/thesis-ahs/tree/master/Challenge%202:%20Injection#challenge-21-log-in-as-administrator) and [3.1](LINK)) and log out again.  
+In this case, the admin account with the email the email `admin@juice-sh.op` is the previously logged in user. Log in with his credentials (described in challenges [2.1](https://github.com/nt-ca-aqe/thesis-ahs/tree/master/Challenge%202:%20Injection#challenge-21-log-in-as-administrator) and [3.1](https://github.com/nt-ca-aqe/thesis-ahs/tree/master/Challenge%203:%20Broken%20Authentication%20-%20Solutions#challenge-31-brute-force-attack)) and log out again.  
 Log in with another account, for example your own account. In this case, the email of this account is `testuser@juice-sh.op`  
 Open the console and extend a GET- or POST-request caused by the admin account. In this example, the POST call `http://localhost:3000/rest/user/login` has been expanded:  
 ![3_3_2](screenshots/solution3_3_2.png)  
