@@ -1,6 +1,6 @@
 # Challenge Collection 4: Sensitive Data Exposure
 
-*--INTRODUCTION TEXT--*
+Use of weak encryption or hashing algorithms might reveal sensitive data. The danger of plain text being displayed in data traffic can provoke the discluse of sensitive personal information like user credentials or credit cards information.
 
    * [Challenge 4.1: Log in with MC SafeSearch's original password (without SQL injection or changing password)](#challenge-41-log-in-with-mc-safesearchs-original-password-without-sql-injection-or-changing-password)
       * [Tips:](#tips)

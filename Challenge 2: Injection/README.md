@@ -1,6 +1,6 @@
 # Challenge Collection 2: Injection
 
-*-- Introduction Text --*
+Injection is the process of inserting malicious code. Every application that uses an interpreter could contain injection flaws. The impacts of injection are critical, because attacks can lead to disclosure to unauthorized parties, data loss and corruption.
 
    * [Challenge 2.1: Log in as administrator](#challenge-21-log-in-as-administrator)
       * [Tips:](#tips)
