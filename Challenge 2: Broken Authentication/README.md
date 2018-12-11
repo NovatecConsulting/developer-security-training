@@ -10,7 +10,7 @@ Broken Authentication is the consequence of programming flaws in session managem
       * [Tips:](#tips-2)
    * [Challenge 2.4: Change the password of the user account of Bender](#challenge-24-change-the-password-of-the-user-account-of-bender)
       * [Tips:](#tips-3)
-   * [Challenge 2.5: Log in with the user account of Bender](#challenge-25-log-in-with-the-user-account-of-bender)
+   * [Challenge 2.5: Log in with the user account of Bender](#challenge-25-log-in-with-the-user-account-of-bjoern)
       * [Tips:](#tips-4)
 
 **HINT:** Make sure that you download [Postman](https://www.getpostman.com/apps) and [OWASP ZAP](https://github.com/zaproxy/zaproxy/wiki/Downloads).
@@ -72,10 +72,10 @@ Log in with the original user credentials of Bjoern (without SQL injection).
 
 2. **Tip:** Bjoern's encrypted password is not a [MD5](https://en.wikipedia.org/wiki/MD5) hash.
 
-3. **Tip:** Brute-force attacks and decrypting the password hash won't be possible
+3. **Tip:** Brute-force attacks and decrypting the password hash won't be possible.
 
-4. **Tip:** The registration has been performed by Google OAuth
+4. **Tip:** The registration has been performed by Google OAuth.
 
-5. **Tip:** Have a look at the tab `Debugger` (Firefox) or `Sources` (Chrome)
+5. **Tip:** Have a look at the tab `Debugger` (Firefox) or `Sources` (Chrome).
 
 

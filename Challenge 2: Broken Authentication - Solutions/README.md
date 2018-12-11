@@ -4,7 +4,7 @@
    * [Challenge 2.2: Create an administrator account](#challenge-22-create-an-administrator-account)
    * [Challenge 2.3: Take over the session of a previously logged in user](#challenge-23-take-over-the-session-of-a-previously-logged-in-user)
    * [Challenge 2.4: Change the password of the user account of Bender](#challenge-24-change-the-password-of-the-user-account-of-bender)
-   * [Challenge 2.5: Log in with the user account of Bender](#challenge-25-log-in-with-the-user-account-of-bender)
+   * [Challenge 2.5: Log in with the user account of Bender](#challenge-25-log-in-with-the-user-account-of-bjoern)
 
 ## Challenge 2.1: Brute-force attack
 
@@ -81,7 +81,7 @@ As you now see at the top, the session of `admin@juice-sh.op` has been restored 
 
 ## Challenge 2.4: Change the password of the user account of Bender
 Log in with Bender's user account. Visiting the administration section of the juice shop (described in [Challenge 1.2](https://github.com/nt-ca-aqe/thesis-ahs/tree/master/Challenge%201:%20Broken%20Access%20Control#challenge-12-find-the-admin-page)) reveals his e-mail: `bender@juice-sh.op`. If you don't know the password, apply SQL injection.  
-Browse to http://localhost:3000/#/change-password, fill the input fields with random strings (`New Password` and `Repeat Password` of course must match) and click on change while capturing the HTTP calls in the `console` of the web development tool.  
+Browse to http://localhost:3000/#/change-password, fill the input fields with random strings (`New Password` and `Repeat New Password` of course must match) and click on `Change` while capturing the HTTP calls in the `console` of the web development tool.  
 ![3_4_1](screenshots/solution3_4_1.png)  
 In this case, the first field has been filled with `passwordold` and the other two fields has been filled with `passwordnew`. Also, `passwordnew` should be the new password after solving this challenge. The console shows this GET call:  
 ![3_4_2](screenshots/solution3_4_2.png)  
@@ -90,7 +90,7 @@ Copy the request `http://localhost:3000/rest/user/change-password?current=passwo
 As excepted, this GET call shows `Current password is not correct.` as result. You have to test different variants. By example, you can try a GET call without the `repeat` parameter:  
 ![3_4_4](screenshots/solution3_4_4.png)  
 This leads to the message `New and repeated password do not match.`  
-In contrast, removing the `current` parameter will show all user information for Bender.  
+In contrast, removing the `current` parameter will show all user information for Bender and brings the wanted effect.
 ![3_4_5](screenshots/solution3_4_5.png)  
 Also, the given parameter value `passwordnew` becomes the new password for Bender.
 
@@ -98,8 +98,8 @@ Also, the given parameter value `passwordnew` becomes the new password for Bende
 ## Challenge 2.5: Log in with the user account of Bjoern
 Inspect the source code by opening the web development tool and selecting tab `Debugger` (Firefox) or `Sources` (Chrome). Search after the keyword `OAuth` in the `main.js` file.  
 ![3_5_1](screenshots/solution3_5_1.png)  
-Have a look at the functions for `login` and `save`. You see, that the password is generated both times in the same way: `btoa(n.email.split("").reverse().join(""))`.
-Researching the meaning of `btoa` will reveal that this method encodes a string in base-64 (For example, read on https://www.w3schools.com/jsref/met_win_btoa.asp). In addition, a `reverse` function is performed on the e-mail. So, the password is created from the reversed e-mail of the user.
+Have a look at the functions for `login` and `save`. You see, that the password is generated both times in the same way: `btoa(n.email.split("").reverse().join(""))`.  
+Researching the meaning of `btoa` will reveal that this method encodes a string in base-64 (For example, read on https://www.w3schools.com/jsref/met_win_btoa.asp). In addition, a `reverse` function is performed on the e-mail. So, the password is created from the reversed e-mail of the user.  
 Visiting the administration section of the juice shop (described in [Challenge 1.2](https://github.com/nt-ca-aqe/thesis-ahs/tree/master/Challenge%201:%20Broken%20Access%20Control#challenge-12-find-the-admin-page)) shows that `bjoern.kimminich@googlemail.com` is the e-mail of Bjoern.  
 By decoding the string `moc.liamelgoog@hcinimmik.nreojb` on http://decodebase64.com/ reveals the password: `bW9jLmxpYW1lbGdvb2dAaGNpbmltbWlrLm5yZW9qYg==`  
 ![3_5_2](screenshots/solution3_5_2.png)  

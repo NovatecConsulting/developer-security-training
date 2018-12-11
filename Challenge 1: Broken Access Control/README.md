@@ -1,6 +1,6 @@
 # Challenge Collection 1: Broken Access Control
 
-*-- Introduction Text --*
+Broken Access Control comprises security flaws caused by fragile implemented access rights in web applications. The decision whether an user is allowed to call a certain resource depends on factors like the confidentiality of the requested source and the role of the requesting user. However, security gaps in this area are common, because several contents haven't been secured enough in programming. This can lead to horrible consequences, as an unauthorized user is able to take over the administration and obtain, manipulate or delete important and sensitive data.
 
    * [Prepare for the challenges:](#prepare-for-the-challenges)
    * [Challenge 1.1: Find the Score Board with the challenge overview](#challenge-11-find-the-score-board-with-the-challenge-overview)
@@ -19,7 +19,7 @@
 **HINT:** Make sure that you download [Postman](https://www.getpostman.com/apps).
 
 ## Prepare for the challenges:
-Before starting the first challenge, try to become familiar with the OWASP Juice Shop. Try out the functionalities in the menu bar like the "Contact Us"-Button or the "Search"-Field, have a look at the Login Site and create an account in the Juice Shop. After you have done the user registration, there might be several new functions as a logged in user which you should also try out. 
+Before starting the first challenge, try to become familiar with the OWASP Juice Shop. Try out the functionalities in the menu bar like the `Contact Us`-Button or the `Search`-Field, have a look at the Login Site and create an account in the Juice Shop. After you have done the user registration, there might be several new functions as a logged in user which you should also try out. 
 
 ## Challenge 1.1: Find the Score Board with the challenge overview
 The Score Board provides an overview of all challenges in the OWASP Juice Shop. This subpage cannot be found by navigating through the application, because there is no direct button redirecting to the Score Board yet.  
@@ -82,7 +82,7 @@ Chrome Users: The tab `Elements` might help you.
 4. **Tip:** Think about a certain attribute you have to change in the database for modifying the author of the written comment. A search in the sources after the name of this attribute might help you.
 
 
-## Challenge 1.6: Change the description of the product OWASP SSL Advanced Forensic Tool (O-Saft)
+## Challenge 1.6: Change the description of the product "OWASP SSL Advanced Forensic Tool (O-Saft)"
 Replace the description of the product OWASP SSL Advanced Forensic Tool (O-Saft). The description should ony consist of the word `More...`, whichs links to `http://kimminich.de` (the developer of the OWASP Juice Shop).
 
 ### Tips:
