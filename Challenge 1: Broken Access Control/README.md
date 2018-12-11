@@ -16,6 +16,8 @@
    * [Challenge 1.6: Change the description of the product OWASP SSL Advanced Forensic Tool (O-Saft)](#challenge-16-change-the-description-of-the-product-owasp-ssl-advanced-forensic-tool-o-saft)
       * [Tips:](#tips-5)
 
+**HINT:** Make sure that you download [Postman](https://www.getpostman.com/apps).
+
 ## Prepare for the challenges:
 Before starting the first challenge, try to become familiar with the OWASP Juice Shop. Try out the functionalities in the menu bar like the "Contact Us"-Button or the "Search"-Field, have a look at the Login Site and create an account in the Juice Shop. After you have done the user registration, there might be several new functions as a logged in user which you should also try out. 
 
@@ -85,3 +87,12 @@ Replace the description of the product OWASP SSL Advanced Forensic Tool (O-Saft)
 
 ### Tips:
 
+1. **Tip:** Capture the HTTP calls in the `Console` while interacting with the product.
+
+2. **Tip:** Try to find out the id of OWASP SSL Advanced Forensic Tool (O-Saft).
+
+3. **Tip:** Try to interact with the API via [Postman](https://www.getpostman.com/apps).
+
+4. **Tip:** The sources could reveal the exact path to interact with the API.
+
+5. **Tip:** You can solve the challenge by submitting one PUT request.

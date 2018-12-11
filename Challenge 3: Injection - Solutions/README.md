@@ -1,16 +1,14 @@
-# Challenge Collection 2: Injection - Solutions
+# Challenge Collection 3: Injection - Solutions
 
-   * [Challenge 2.1: Log in as administrator](#challenge-21-log-in-as-administrator)
+   * [Challenge 3.1: Log in as administrator](#challenge-31-log-in-as-administrator)
       * [Variant 1: Causing an internal server error by inserting invalid input](#variant-1-causing-an-internal-server-error-by-inserting-invalid-input)
       * [Variant 2: Scanning the juice shop with OWASP ZAP](#variant-2-scanning-the-juice-shop-with-owasp-zap)
-   * [Challenge 2.2: Modify a product review](#challenge-22-modify-a-product-review)
-   * [Challenge 2.3: Modify multiple product reviews at once](#challenge-23-modify-multiple-product-reviews-at-once)
-   * [Challenge 2.4: Cause the server of the juice shop to sleep for 2 seconds](#challenge-24-cause-the-server-of-the-juice-shop-to-sleep-for-2-seconds)
+   * [Challenge 3.2: Modify a product review](#challenge-32-modify-a-product-review)
+   * [Challenge 3.3: Modify multiple product reviews at once](#challenge-33-modify-multiple-product-reviews-at-once)
+   * [Challenge 3.4: Cause the server of the juice shop to sleep for 2 seconds](#challenge-34-cause-the-server-of-the-juice-shop-to-sleep-for-2-seconds)
 
-## Challenge 2.1: Log in as administrator
-
+## Challenge 3.1: Log in as administrator
 ### Variant 1: Causing an internal server error by inserting invalid input
-
 Provoke an error by crashing the application with the input `admin@juice-sh.op'` and any password.  
 
 ![2_1_1](screenshots/solution2_1_1.png)  
@@ -23,7 +21,6 @@ There you can recognize the underlying NoSQL-Query in the row `sql`: `SELECT * F
 With `admin@juice-sh.op'--` as input and any password, you can access the administrator's account.
 
 ### Variant 2: Scanning the juice shop with OWASP ZAP
-
 [Install OWASP ZAP](https://github.com/zaproxy/zaproxy/wiki/Downloads).  
 Open OWASP ZAP. In the field `URL to attack`, fill in the URL of Juice Shop and click the `Launch Browser`-Button.  
 ![2_1_4](screenshots/solution2_1_4.png)  
@@ -44,8 +41,7 @@ As you can see, there are numerous attempts with the result `Unauthorized`. By s
 You see the parameters that lead to a successful login: `admin@juice-sh.op' AND '1'='1' --` as email input and `123` as password input.
 
 
-## Challenge 2.2: Modify a product review
-
+## Challenge 3.2: Modify a product review
 Open the web development tool and select the tab `Console`.
 Open the product information for `Apple Juice (1000 ml)`. You will receive the GET call `http://localhost:3000/rest/product/1/reviews`. Select the tab `Response` (Firefox) of the GET call to see the given parameters:
 ![2_2_1](screenshots/solution2_2_1.png)  
@@ -60,8 +56,7 @@ Check if you have chosen `JSON (application/json)` as type:
 Opening the product information again shows the wanted comment:
 ![2_2_3](screenshots/solution2_2_3.png)  
 
-## Challenge 2.3: Modify multiple product reviews at once
-
+## Challenge 3.3: Modify multiple product reviews at once
 Similar to [Challenge 2.2](#challenge-22-modify-a-product-review), you need to insert `http://localhost:3000/rest/product/reviews` in Postman.
 You have to replace the old input for the `id` with `{ "$ne": "" }`, because `ne` is the `not equal` operator. As you want to update **all** product reviews, `ne=""` will match every time because there is no id with an empty string.
 Adjust the message to `Juice Shop has been hacked!`, make sure you have selected `JSON (application/json)` and `Send` the PATCH call with the body:
@@ -75,8 +70,7 @@ A look at several products shows that reviews from different users has changed t
 ![2_3_3](screenshots/solution2_3_3.png)  
 
 
-## Challenge 2.4: Cause the server of the juice shop to sleep for 2 seconds
-
+## Challenge 3.4: Cause the server of the juice shop to sleep for 2 seconds
 Open any product information while observing the console of the web development tool. You see the GET call `http://localhost:3000/rest/product/1/reviews`, which holds an opportunity for injecting the sleep function:  
 
 ![2_4_1](screenshots/solution2_4_1.png)  

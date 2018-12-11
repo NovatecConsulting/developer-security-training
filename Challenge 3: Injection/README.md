@@ -1,19 +1,19 @@
-# Challenge Collection 2: Injection
+# Challenge Collection 3: Injection
 
 Injection is the process of inserting malicious code. Every application that uses an interpreter could contain injection flaws. The impacts of injection are critical, because attacks can lead to disclosure to unauthorized parties, data loss and corruption.
 
-   * [Challenge 2.1: Log in as administrator](#challenge-21-log-in-as-administrator)
+   * [Challenge 3.1: Log in as administrator](#challenge-31-log-in-as-administrator)
       * [Tips:](#tips)
-   * [Challenge 2.2: Modify a product review](#challenge-22-modify-a-product-review)
+   * [Challenge 3.2: Modify a product review](#challenge-32-modify-a-product-review)
       * [Tips:](#tips-1)
-   * [Challenge 2.3: Modify multiple product reviews at once](#challenge-23-modify-multiple-product-reviews-at-once)
+   * [Challenge 3.3: Modify multiple product reviews at once](#challenge-33-modify-multiple-product-reviews-at-once)
       * [Tips:](#tips-2)
-   * [Challenge 2.4: Cause the server of the juice shop to sleep for 2 seconds](#challenge-24-cause-the-server-of-the-juice-shop-to-sleep-for-2-seconds)
+   * [Challenge 3.4: Cause the server of the juice shop to sleep for 2 seconds](#challenge-34-cause-the-server-of-the-juice-shop-to-sleep-for-2-seconds)
       * [Tips:](#tips-3)
 
 **HINT:** Make sure that you download [OWASP ZAP](https://github.com/zaproxy/zaproxy/wiki/Downloads) and [Postman](https://www.getpostman.com/apps).
 
-## Challenge 2.1: Log in as administrator
+## Challenge 3.1: Log in as administrator
 Get access to the account of the administrator.
 
 ### Tips:
@@ -27,8 +27,7 @@ Get access to the account of the administrator.
 4. **Tip:** Have a look at the web development tool.
 
 
-## Challenge 2.2: Modify a product review
-
+## Challenge 3.2: Modify a product review
 Modify the product reviews of the product `Apple Juice (1000 ml)` without being logged in the administrator account.  
 Change the first review with the text `One of my favorites!` written by `admin@juice-sh.op` to `Apple Juice has been hacked!` and manipulate the author so that Jim's email appears.
 
@@ -41,21 +40,21 @@ Change the first review with the text `One of my favorites!` written by `admin@j
 3. **Tip:** You have to slightly change the GET call that you have observed in your console.
 
 
-## Challenge 2.3: Modify multiple product reviews at once
+## Challenge 3.3: Modify multiple product reviews at once
 Modify multiple product reviews at once by changing the text of all reviews to `Juice Shop has been hacked!`.
 
 ### Tips: 
 
-1. **Tip:** The process of [Challenge 2.2](#challenge-22-modify-a-product-review) might help you.
+1. **Tip:** The process of [Challenge 3.2](#challenge-32-modify-a-product-review) might help you.
 
 2. **Tip:** You need to use a query operator to solve this challenge.
 
 
-## Challenge 2.4: Cause the server of the juice shop to sleep for 2 seconds
+## Challenge 3.4: Cause the server of the juice shop to sleep for 2 seconds
 Try to lead the server to sleep for 2 seconds.
 
 ### Tips:
 
-1. **Tip:** Find a way to interact with the API. [Challenge 2.2](#challenge-22-modify-a-product-review) and [challenge 2.3](#challenge-23-modify-multiple-product-reviews-at-once) might reveal a possibility where you can exploit a parameter.
+1. **Tip:** Find a way to interact with the API. [Challenge 3.2](#challenge-32-modify-a-product-review) and [challenge 3.3](#challenge-33-modify-multiple-product-reviews-at-once) might reveal a possibility where you can exploit a parameter.
 
 2. **Tip:** You need to inject a sleep function as a parameter.

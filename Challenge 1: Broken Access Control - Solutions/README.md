@@ -87,3 +87,22 @@ You recognize the POST call `http://localhost:3000/api/Feedbacks`. Type this in 
 
 ## Challenge 1.6: Change the description of the product OWASP SSL Advanced Forensic Tool (O-Saft)
 
+Type `OWASP SSL Advanced Forensic Tool (O-Saft)` in the search bar and open the product information while capturing the HTTP traffic in the console.  
+
+![1_6_1](screenshots/solution1_6_1.png)  
+
+In the `console` of the development tool, you will see this output:  
+
+![1_6_2](screenshots/solution1_6_2.png)  
+
+So, the GET call `http://localhost:3000/rest/product/9/reviews` reveals that the product OWASP SSL Advanced Forensic Tool (O-Saft) has the id `9`.  
+You need to interact with the API. To find out the right path to manipulate the products, switch in the development tool to tab `Debugger` in Firefox or tab `Sources` in Chrome and search after the all entries that contains the keyword `api`.  
+![1_6_3](screenshots/solution1_6_3.png)  
+This search will show the path `api/Products`. Also, you can recognize the path `/rest/product/search?q=`. Browse to `http://localhost:3000/rest/product/search?q=`:  
+![1_6_4](screenshots/solution1_6_4.png)  
+In this way, you get a list of all products in the juice shop. The advantage of this schema is that it shows the parameter you need to replace is named `description`. You only have to copy the marked snippet `<a href=\"https://www.owasp.org/index.php/O-Saft\" target=\"_blank\">More...</a>` and replace the URL to `http://kimminich.de`.  
+Open [Postman](https://www.getpostman.com/apps) and send a PUT request to `http://localhost:3000/api/Products/9` with `{"description": "<a href=\"http://kimminich.de\" target=\"_blank\">More...</a>"}` as body. Make sure that you have selected `JSON (application/json)`:  
+![1_6_5](screenshots/solution1_6_5.png)  
+Repeating the search after `OWASP SSL Advanced Forensic Tool (O-Saft)` will present the new description:  
+![1_6_6](screenshots/solution1_6_6.png)  
+
