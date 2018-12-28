@@ -10,7 +10,7 @@ Broken Authentication is the consequence of programming flaws in session managem
       * [Tips:](#tips-2)
    * [Challenge 2.4: Change the password of the user account of Bender](#challenge-24-change-the-password-of-the-user-account-of-bender)
       * [Tips:](#tips-3)
-   * [Challenge 2.5: Log in with the user account of Bender](#challenge-25-log-in-with-the-user-account-of-bjoern)
+   * [Challenge 2.5: Log in with the user account of Bjoern](#challenge-25-log-in-with-the-user-account-of-bjoern)
       * [Tips:](#tips-4)
 
 **HINT:** Make sure that you download [Postman](https://www.getpostman.com/apps) and [OWASP ZAP](https://github.com/zaproxy/zaproxy/wiki/Downloads).

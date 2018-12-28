@@ -57,7 +57,7 @@ Opening the product information again shows the wanted comment:
 ![2_2_3](screenshots/solution2_2_3.png)  
 
 ## Challenge 3.3: Modify multiple product reviews at once
-Similar to [Challenge 2.2](#challenge-22-modify-a-product-review), you need to insert `http://localhost:3000/rest/product/reviews` in Postman.
+Similar to [Challenge 3.2](#challenge-32-modify-a-product-review), you need to insert `http://localhost:3000/rest/product/reviews` in Postman.
 You have to replace the old input for the `id` with `{ "$ne": "" }`, because `ne` is the `not equal` operator. As you want to update **all** product reviews, `ne=""` will match every time because there is no id with an empty string.
 Adjust the message to `Juice Shop has been hacked!`, make sure you have selected `JSON (application/json)` and `Send` the PATCH call with the body:
 ```{ "id": { "$ne": "" }, "message": "Juice Shop has been hacked!"}```

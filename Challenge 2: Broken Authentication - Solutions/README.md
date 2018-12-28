@@ -4,7 +4,7 @@
    * [Challenge 2.2: Create an administrator account](#challenge-22-create-an-administrator-account)
    * [Challenge 2.3: Take over the session of a previously logged in user](#challenge-23-take-over-the-session-of-a-previously-logged-in-user)
    * [Challenge 2.4: Change the password of the user account of Bender](#challenge-24-change-the-password-of-the-user-account-of-bender)
-   * [Challenge 2.5: Log in with the user account of Bender](#challenge-25-log-in-with-the-user-account-of-bjoern)
+   * [Challenge 2.5: Log in with the user account of Bjoern](#challenge-25-log-in-with-the-user-account-of-bjoern)
 
 ## Challenge 2.1: Brute-force attack
 

@@ -65,7 +65,7 @@ In the top, you can see the email `admin@juice-sh.op` next to the topic `Your Ba
 
 ## Challenge 1.5: Write a comment in the name of another user:
 Browse to http://localhost:3000/#/contact.
-Open the web development tool and navigate to tab "Inspector" in Firefox or "Elements" in Chrome:
+Open the web development tool and navigate to tab `Inspector` in Firefox or `Elements` in Chrome:
 ![1_5_1](screenshots/solution1_5_1.png)  
 You will find the input field with the id `userId`. This field includes the attribute `hidden`. Edit the source and remove this attribute.
 After editing the source, an input field appears above the `Author`:
