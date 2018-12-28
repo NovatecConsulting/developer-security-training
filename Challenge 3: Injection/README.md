@@ -1,6 +1,6 @@
 # Challenge Collection 3: Injection
 
-Injection is the process of inserting malicious code. Every application that uses an interpreter could contain injection flaws. The impacts of injection are critical, because attacks can lead to disclosure to unauthorized parties, data loss and corruption.
+**Injection** is the process of inserting malicious code. Every application that uses an interpreter could contain injection flaws. The impacts of injection are critical, because attacks can lead to disclosure to unauthorized parties, data loss and corruption.
 
    * [Challenge 3.1: Log in as administrator](#challenge-31-log-in-as-administrator)
       * [Tips:](#tips)
@@ -22,14 +22,14 @@ Get access to the account of the administrator.
 
 2. **Tip:** You don't need the matching password to solve the challenge.
 
-3. **Tip:** Try to corrupt the underlying NoSQL-Query by inserting invalid input. For example, an apostrophe `'` might help.
+3. **Tip:** Try to corrupt the underlying **NoSQL** Query by inserting invalid input. For example, an apostrophe `'` might help.
 
-4. **Tip:** Have a look at the web development tool.
+4. **Tip:** Have a look at the **Web Development Tool**.
 
 
 ## Challenge 3.2: Modify a product review
 Modify the product reviews of the product `Apple Juice (1000 ml)` without being logged in the administrator account.  
-Change the first review with the text `One of my favorites!` written by `admin@juice-sh.op` to `Apple Juice has been hacked!` and manipulate the author so that Jim's email appears.
+Change the first review with the text `One of my favorites!` written by `admin@juice-sh.op` to `Apple Juice has been hacked!` and manipulate the author so that **Jim's email** appears.
 
 ### Tips:
 
@@ -37,7 +37,7 @@ Change the first review with the text `One of my favorites!` written by `admin@j
 
 2. **Tip:** Find out, which parameters you have to manipulate. Postman will help you with modifying these parameters.
 
-3. **Tip:** You have to slightly change the GET call that you have observed in your console.
+3. **Tip:** You have to slightly change the **GET** call that you have observed in your console.
 
 
 ## Challenge 3.3: Modify multiple product reviews at once
