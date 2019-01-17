@@ -1,7 +1,7 @@
 # Challenge Collection 5: Cross-Site scripting (XSS) - Solutions
 
 * [Challenge 5.1: Persisted XSS with Postman](#challenge-51-persisted-xss-with-postman)
-* [Challenge 5.2: Persisted XSS with Postman 2](#challenge-52-persisted-xss-with-postman-2)
+* [Challenge 5.2: Persisted XSS with Postman (2)](#challenge-52-persisted-xss-with-postman-2)
 * [Challenge 5.3: Persisted XSS through the UI](#challenge-53-persisted-xss-through-the-ui)
 * [Challenge 5.4: Reflected XSS](#challenge-54-reflected-xss)
 * [Challenge 5.5: DOM XSS](#challenge-55-dom-xss)
@@ -27,7 +27,7 @@ Checking the tab `Inspector` will show you that the iframe element has become a 
 ![5_3_4](screenshots/solution5_3_4.png)  
 
 
-## Challenge 5.2: Persisted XSS with Postman 2
+## Challenge 5.2: Persisted XSS with Postman (2)
 [Challenge 1.6](https://github.com/nt-ca-aqe/thesis-ahs/tree/master/Challenge%201:%20Broken%20Access%20Control#challenge-16-change-the-description-of-the-product-owasp-ssl-advanced-forensic-tool-o-saft) has shown you that you have the oppurtunity to interact with the **products API** via `http://localhost:3000/api/Products`. Also, browsing to this URL shows you the following information:
 ![5_4_0](screenshots/solution5_4_0.png)  
 To create a new product, you have to fill the parameters `name`, `description` and `price` with values.  

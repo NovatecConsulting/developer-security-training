@@ -2,7 +2,7 @@
 
 * [Challenge 5.1: Persisted XSS with Postman](#challenge-51-persisted-xss-with-postman)
    * [Tips:](#tips)
-* [Challenge 5.2: Persisted XSS with Postman 2](#challenge-52-persisted-xss-with-postman-2)
+* [Challenge 5.2: Persisted XSS with Postman (2)](#challenge-52-persisted-xss-with-postman-2)
    * [Tips:](#tips-1)
 * [Challenge 5.3: Persisted XSS through the UI](#challenge-53-persisted-xss-through-the-ui)
    * [Tips:](#tips-2)
@@ -33,7 +33,7 @@ To perform XSS, use iframe: <code><iframe src="javascript:alert(&grave;xss&grave
 5. **Tip:** There might be characters you must escape.
 
 
-## Challenge 5.2: Persisted XSS with Postman 2
+## Challenge 5.2: Persisted XSS with Postman (2)
 Try to perform a **persisted XSS attack** by affecting the table of the **Products** with **Postman**. Every call containing the new product should alert a dialog with the content `xss`.  
 To perform XSS, use iframe: <code><iframe src="javascript:alert(&grave;xss&grave;)"/></code>
 
