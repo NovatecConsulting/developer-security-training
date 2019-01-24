@@ -1,6 +1,6 @@
 # Challenge Collection 2: Broken Authentication
 
-**Broken Authentication** is the consequence of programming flaws in session management and authentication. Insufficient conception of identity and access controll can lead to security gaps. Attackers are able to exploit these security gaps by using automated tools for brute-force-attacks. The worst case is that attackers gain access to administrator accounts, get sensitive data and the possibility to identity theft.
+**Broken Authentication** is the consequence of programming flaws in session management and authentication. Insufficient conception of identity and access control can lead to security gaps. Attackers are able to exploit these security gaps by using automated tools for brute-force-attacks. The worst case is that attackers gain access to administrator accounts, get sensitive data and the possibility to identity theft.
 
    * [Challenge 2.1: Brute-force attack](#challenge-21-brute-force-attack)
       * [Tips:](#tips)
@@ -16,7 +16,7 @@
 **HINT:** Make sure that you download [Postman](https://www.getpostman.com/apps) and [OWASP ZAP](https://github.com/zaproxy/zaproxy/wiki/Downloads).
 
 ## Challenge 2.1: Brute-force attack
-Log in with the original password of the administrator without SQL injection or the changing password. Detect the password with a **brute force attack**. For example, you could use https://github.com/zaproxy/zaproxy/wiki/Downloads.
+Log in with the original password of the administrator without SQL injection or changing the password. Detect the password with a **brute force attack**. For example, you could use https://github.com/zaproxy/zaproxy/wiki/Downloads.
 
 ### Tips:
 
