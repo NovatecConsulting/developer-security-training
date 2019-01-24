@@ -1,0 +1,17 @@
+<div class="header">
+    <h1>Spring Boot Secure User Database</h1>
+
+    <ul class="navbar" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+        style="padding:5px;margin-bottom:20px;">
+        <li class="navbar"><a th:href="@{/}" class="active">Home</a></li>
+        <li class="navbar"><a th:href="@{/usersearch}" class="active">User Search</a></li>
+        <li class="navbar"><a th:href="@{/userInfo}" class="active">User Info</a></li>
+        <li class="navbar"><a th:href="@{/admin}" class="active">Administration Section</a></li>
+        <li class="navbar" style="float:right"><a th:if="${#request.userPrincipal == null}" th:href="@{/registration}"
+                                                  class="active">Registration</a></li>
+        <li class="navbar" style="float:right"><a th:if="${#request.userPrincipal == null}"
+                                                  th:href="@{/login}">Login</a></li>
+        <li class="navbar" style="float:right"><a th:if="${#request.userPrincipal != null}"
+                                                  th:href="@{/logout}">Logout</a></li>
+    </ul>
+</div>

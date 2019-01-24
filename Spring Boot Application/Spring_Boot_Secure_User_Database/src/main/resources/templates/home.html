@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.css}"/>
+    <title th:utext="${title}"></title>
+</head>
+
+<body>
+
+<th:block th:include="/_menu"></th:block>
+
+<h2>Home</h2>
+Welcome to <b>Spring Boot Secure User Database</b>.
+Feel free to try out the features of this application:
+
+<ul class="home">
+    <li><b>User Search:</b> On this site, you can view the information of a registered user account by searching
+        after the username.
+    </li>
+    <br/>
+    <li><b>User Info:</b> This site displays your own user information <b style="color: red">(only accessible if logged
+        in)</b>.
+    </li>
+    <br/>
+    <li><b>Administration Section</b> This site lists all registered user accounts with information like Username, Email
+        and full name <b style="color: red">(only accessible if logged in as
+            administrator).</b>
+    </li>
+    <br/>
+    <li><b>Login:</b> Log in the application with your user credentials. If you have not created any user account, you
+        are able to access the user area with the following credentials:<br/><br/>
+        Login as <b>administrator</b> with all access rights:<br/>
+        <b>Username</b>: admin<br/>
+        <b>Password</b>: $ecUr€84<br/><br/>
+        Login as <b>normal user</b> with limited access rights (no access to <b>Administration Section</b>):<br/>
+        <b>Username</b>: standarduser<br/>
+        <b>Password</b>: $ecUr€84
+    </li>
+    <br/>
+    <li><b>Registration:</b> On this site, you can create your own user account.
+    </li>
+</ul>
+</body>
+</html>

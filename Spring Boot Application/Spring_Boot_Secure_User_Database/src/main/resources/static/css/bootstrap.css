@@ -1,0 +1,217 @@
+/* GENERAL */
+body {
+    background-color: #CEECF5;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    background-color: #00b200;
+    padding: 5px;
+    color: #f2f2f2;
+    text-align: center;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #00b200;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.navbar-right {
+    float: right;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: sticky;
+    top: 0;
+}
+
+.navbar li {
+    float: left;
+}
+
+.navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+table th, table td {
+    padding: 5px;
+}
+
+.message {
+    color: blue;
+}
+
+span {
+    color: red;
+}
+
+th, td {
+    padding: 5px;
+}
+
+td span {
+    font-size: 90%;
+    font-style: italic;
+    color: red;
+}
+
+.error {
+    color: red;
+    font-style: italic;
+}
+
+#users {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#users td, #users th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#users tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#users tr:hover {
+    background-color: #ddd;
+}
+
+#users th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #00b200;
+    color: white;
+}
+
+#user-info {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 20%;
+}
+
+#user-info td, #users th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#user-info tr {
+    background-color: #f2f2f2;
+}
+
+#user-info th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #00b200;
+    color: white;
+}
+
+/* REGISTRATION */
+.registration-form {
+    padding: 16px;
+    background-color: #CEECF5;
+    border-style: hidden;
+}
+
+input[type=text], input[type=password] {
+    width: 98.7%;
+    padding: 15px;
+    margin: 2px 0 3px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+.btn {
+    background-color: #00b200;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.btn:hover {
+    opacity: 1;
+}
+
+.searchLabel {
+    font-weight: bold;
+}
+
+.searchInput {
+    width: 28.5%;
+    padding: 15px;
+    margin: 2px 0 3px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+.searchInput:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.btn-search {
+    background-color: #00b200;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+    opacity: 0.9;
+}
+
+.btn-search:hover {
+    opacity: 1;
+}
+
+a {
+    color: red;
+}
+
+.signin {
+    background-color: #f1f1f1;
+    text-align: center;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.css}"/>
+    <title th:utext="${title}"></title>
+</head>
+<body>
+<th:block th:include="/_menu"></th:block>
+
+<h2>Administration Section</h2>
+<table border="1" id="users">
+    <tr>
+        <th>User Name</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+    </tr>
+    <tr th:each="user : ${userAccountList}">
+        <td th:utext="${user.userName}">...</td>
+        <td th:utext="${user.firstName}">...</td>
+        <td th:utext="${user.lastName}">...</td>
+        <td th:utext="${user.email}">...</td>
+    </tr>
+</table>
+</body>
+
+</html>

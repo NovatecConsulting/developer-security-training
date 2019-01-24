@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.css}"/>
+    <title th:utext="${title}"></title>
+</head>
+<body>
+<th:block th:include="/_menu"></th:block>
+
+<h2>Registration</h2>
+
+<div th:if="${errorMessage != null}"
+     th:utext="${errorMessage}" class="error">...
+</div>
+
+<form th:action="@{/registration}" th:object="${userAccountForm}" method="POST">
+    <div class="registration-form">
+        <label for="userName"><b>Username</b></label>
+        <input type="text" name="userName" th:field="*{userName}" maxlength="30" placeholder="Username"/>
+        <span th:if="${#fields.hasErrors('userName')}" th:errors="*{userName}">..</span><br/><br/>
+        <label for="password"><b>Password</b></label>
+        <input type="password" name="password" th:field="*{password}" maxlength="30" placeholder="Password"/>
+        <span th:if="${#fields.hasErrors('password')}" th:errors="*{password}">..</span><br/><br/>
+        <label for="repeatPassword"><b>Repeat Password</b></label>
+        <input type="password" name="repeatPassword" th:field="*{repeatPassword}" maxlength="30"
+               placeholder="Repeat Password"/>
+        <span th:if="${#fields.hasErrors('repeatPassword')}" th:errors="*{repeatPassword}">..</span><br/><br/>
+        <label for="email"><b>Email</b></label><br/>
+        <input type="text" name="email" th:field="*{email}" maxlength="36" placeholder="Email"/>
+        <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}">..</span><br/><br/>
+        <label for="firstName"><b>First Name</b></label>
+        <input type="text" name="firstName" th:field="*{firstName}" maxlength="30" placeholder="First Name"/>
+        <span th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}">..</span><br/><br/>
+        <label for="lastName"><b>Last Name</b></label>
+        <input type="text" th:field="*{lastName}" maxlength="30" placeholder="Last Name"/>
+        <span th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}">..</span><br/><br/>
+        <button type="submit" class="btn">Register</button>
+    </div>
+</form>
+
+</body>
+</html>

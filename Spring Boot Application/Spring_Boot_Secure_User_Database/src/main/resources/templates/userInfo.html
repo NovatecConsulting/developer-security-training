@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.css}"/>
+    <title>User Info</title>
+</head>
+<body>
+<th:block th:include="/_menu"></th:block>
+
+
+<h2>User Info</h2>
+<h3>You are currently logged in as: </h3>
+<div>
+    <table id="user-info">
+        <tr>
+            <th>UserID</th>
+            <td th:text="${userInfo.userId}">Text ...</td>
+        </tr>
+        <tr>
+            <th>Username</th>
+            <td th:text="${userInfo.userName}">Text ...</td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td th:text="${userInfo.email}">Text ...</td>
+        </tr>
+        <tr>
+            <th>First Name</th>
+            <td th:text="${userInfo.firstName}">Text ...</td>
+        </tr>
+        <tr>
+            <th>Last Name</th>
+            <td th:text="${userInfo.lastName}">Text ...</td>
+        </tr>
+    </table>
+</div>
+
+<br/><br/>
+
+</body>
+
+</html>

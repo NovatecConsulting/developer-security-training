@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.css}"/>
+    <title>Login</title>
+</head>
+<body>
+<th:block th:include="/_menu"></th:block>
+
+<h2>Login</h2>
+
+<div th:if="${#request.getParameter('error') == 'true'}"
+     style="color:red;margin:10px 0px;">
+    Login failed!<br/>
+    Username or password is invalid. Try again!
+</div>
+
+<form name='f' th:action="@{/j_spring_security_check}" method='POST'>
+    <div class="registration-form">
+        <label for="userName"><b>Username</b></label>
+        <input type='text' name='username' value='' minlength="2" maxlength="36" placeholder="Username"><br/><br/>
+        <label for="password"><b>Password</b></label>
+        <input type='password' name='password' maxlength="30" placeholder="Password"/><br/><br/>
+        <b>Remember Me?</b>
+        <input type="checkbox" name="remember-me"/><br/><br/>
+        <input name="submit" type="submit" value="Login" class="btn"/>
+    </div>
+</form>
+
+</body>
+</html>
