@@ -11,7 +11,7 @@
 * [Challenge 5.5: DOM XSS](#challenge-55-dom-xss)
    * [Tips:](#tips-4)
 
-**Cross-Site scripting (XSS)** is the injection of malicious code in web applications. It allows atackers to execute JavaScript in the browser of another user. This can lead to session stealing, account takeover or the download of malicious software, as the code of the attacker becomes a part of the HTML source of the application.  
+**Cross-Site scripting (XSS)** is the injection of malicious code in web applications. It allows attackers to execute JavaScript in the browser of another user. This can lead to session stealing, account takeover or the download of malicious software, as the code of the attacker becomes a part of the HTML source of the application.  
 
 **HINT:** [Install Postman](https://www.getpostman.com/apps) if you haven't done yet.
 
@@ -23,8 +23,8 @@ To perform XSS, use iframe: <code><iframe src="javascript:alert(&grave;xss&grave
 
 1. **Tip:** Try to interact with the **users API**.
 
-2. **Tip:** If you have solved Challenge [2.2](https://github.com/nt-ca-aqe/thesis-ahs/tree/master/Challenge%202:%20Broken%20Authentication#challenge-22-create-an-administrator-account) or 
-[4.1](https://github.com/nt-ca-aqe/thesis-ahs/tree/master/Challenge%204:%20Sensitive%20Data%20Exposure#challenge-41-log-in-with-mc-safesearchs-original-password-without-sql-injection-or-changing-password), you will know how to interact with the **users API**.
+2. **Tip:** If you have solved Challenge [2.2](https://github.com/nt-ca-aqe/thesis-ahs/tree/master/Challenges/Challenge%202:%20Broken%20Authentication#challenge-22-create-an-administrator-account) or 
+[4.1](https://github.com/nt-ca-aqe/thesis-ahs/tree/master/Challenges/Challenge%204:%20Sensitive%20Data%20Exposure#challenge-41-log-in-with-mc-safesearchs-original-password-without-sql-injection-or-changing-password), you will know how to interact with the **users API**.
 
 3. **Tip:** You have to send a **POST** call.
 
@@ -41,7 +41,7 @@ To perform XSS, use iframe: <code><iframe src="javascript:alert(&grave;xss&grave
 
 1. **Tip:** Try to interact with the **products API**.
 
-2. **Tip:** The process is nearly similar to [Challenge 5.1](https://github.com/nt-ca-aqe/thesis-ahs/tree/master/Challenge%205:%20Cross-Site%20Scripting%20(XSS)#challenge-51-persisted-xss-with-postman), so have a look at the tips for this challenge.
+2. **Tip:** The process is nearly similar to [Challenge 5.1](https://github.com/nt-ca-aqe/thesis-ahs/tree/master/Challenges/Challenge%205:%20Cross-Site%20Scripting%20(XSS)#challenge-51-persisted-xss-with-postman), so have a look at the tips for this challenge.
 
 3. **Tip:** Consider that you need an **authorization**.
 
@@ -49,7 +49,7 @@ To perform XSS, use iframe: <code><iframe src="javascript:alert(&grave;xss&grave
 
 
 ## Challenge 5.3: Persisted XSS through the UI
-Try to perform a **persisted XSS attack** by affecting the list of the **customer feedback**. Every call containing customer feedbacks should alert a dialog with the content `xss`.  
+Try to perform a **persisted XSS attack** by affecting the list of the **customer feedback**. Every call containing customer feedback should alert a dialog with the content `xss`.  
 To perform XSS, use iframe: <code><iframe src="javascript:alert(&grave;xss&grave;)"/></code>
 
 ### Tips:
@@ -58,7 +58,7 @@ To perform XSS, use iframe: <code><iframe src="javascript:alert(&grave;xss&grave
 
 2. **Tip:** You have to modify the iframe element, as the common input won't be rendered as the similar output.
 
-3. **Tip:** While visiting sites that contain customer feedbacks, check the sources (tab `Inspector` in **Firefox** or tab `Elements` in **Chrome**) to recognize how the iframe element is embedded in the HTML sources.
+3. **Tip:** While visiting sites that contain customer feedback, check the sources (tab `Inspector` in **Firefox** or tab `Elements` in **Chrome**) to recognize how the iframe element is embedded in the HTML sources.
 
 
 ## Challenge 5.4: Reflected XSS

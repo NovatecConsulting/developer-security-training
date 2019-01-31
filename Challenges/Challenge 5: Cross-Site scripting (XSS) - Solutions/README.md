@@ -1,4 +1,4 @@
-# Challenge Collection 5: Cross-Site scripting (XSS) - Solutions
+# Challenge Collection 5: Cross-Site scripting (XSS) — Solutions
 
 * [Challenge 5.1: Persisted XSS with Postman](#challenge-51-persisted-xss-with-postman)
 * [Challenge 5.2: Persisted XSS with Postman (2)](#challenge-52-persisted-xss-with-postman-2)
@@ -7,13 +7,13 @@
 * [Challenge 5.5: DOM XSS](#challenge-55-dom-xss)
 
 ## Challenge 5.1: Persisted XSS with Postman
-For [Postman](https://www.getpostman.com/apps), you need to find out how to interact with the **users API**. Log in with your own account or with the administrator's account (described in [Challenge 3.1](https://github.com/nt-ca-aqe/thesis-ahs/tree/master/Challenge%203:%20Injection#challenge-31-log-in-as-administrator).  
+For [Postman](https://www.getpostman.com/apps), you need to find out how to interact with the **users API**. Log in with your own account or with the administrator's account (described in [Challenge 3.1](https://github.com/nt-ca-aqe/thesis-ahs/tree/master/Challenges/Challenge%203:%20Injection#challenge-31-log-in-as-administrator)).  
 By navigating to the **admin section** `http://localhost:3000/#/administration`, you will see the list of all users.
 ![5_3_5](screenshots/solution5_3_5.png)  
 Open the tab `console` of the **Web Development Tool** of your browser. Afterwards, click on the eye icon of any user to open the **user's information**. You will recognize a **GET** call in the console:  
 ![5_3_6](screenshots/solution5_3_6.png)  
 The **GET** call `http://localhost:3000/api/Users/1` reveals that you can interact with the **API** by sending a request to `http://localhost:3000/api/Users`. In addition, the tab `Response` of the **GET** call shows you several parameters, that belong to the user object.  
-You have to create a new user entry by submitting a **body** with an **email** and a **password**, as this attributes are needed for a valid user. Fill in the input fields in **Postman** as shown here:  
+You have to create a new user entry by submitting a **body** with an **email** and a **password**, as these attributes are needed for a valid user. Fill in the input fields in **Postman** as shown here:  
 ![5_3_1](screenshots/solution5_3_1.png)  
 Consider that you have to escape the `"` character in the body. So, the submitted body is <code>{"email": "<iframe src=\"javascript:alert(&grave;xss&grave;)\"/>", "password": "xss"}</code>. Make sure you choose `JSON(application/json)` and send this as a **POST** request to `http://localhost:3000/api/Users`. The request leads to a success and shows the body of the new user.  
 Refresh the admin section:
@@ -28,7 +28,7 @@ Checking the tab `Inspector` will show you that the iframe element has become a 
 
 
 ## Challenge 5.2: Persisted XSS with Postman (2)
-[Challenge 1.6](https://github.com/nt-ca-aqe/thesis-ahs/tree/master/Challenge%201:%20Broken%20Access%20Control#challenge-16-change-the-description-of-the-product-owasp-ssl-advanced-forensic-tool-o-saft) has shown you that you have the oppurtunity to interact with the **products API** via `http://localhost:3000/api/Products`. Also, browsing to this URL shows you the following information:
+[Challenge 1.6](https://github.com/nt-ca-aqe/thesis-ahs/tree/master/Challenges/Challenge%201:%20Broken%20Access%20Control#challenge-16-change-the-description-of-the-product-owasp-ssl-advanced-forensic-tool-o-saft) has shown you that you have the opportunity to interact with the **products API** via `http://localhost:3000/api/Products`. Also, browsing to this URL shows you the following information:
 ![5_4_0](screenshots/solution5_4_0.png)  
 To create a new product, you have to fill the parameters `name`, `description` and `price` with values.  
 Before, you need to obtain the **session token** by logging in the application with any account and extracting the information from any **GET** call. To show the **GET** call, open the **Web Development Tool**, choose the tab `console` and switch to tab `Cookies` of the **GET** call:  
@@ -65,7 +65,7 @@ Browse to `http://localhost:3000/#/track-order`. Type in <code><iframe src="java
 Submit your input:  
 ![5_1_2](screenshots/solution5_1_2.png)  
 The dialog with the content `xss` pops out. In addition, you see the **iframe element** in the background as **search result**.  
-In the tab `Inspector` (**Firefox**) or `Elements` (**Chrome**) of the **Web Development Tool**, you will see that the iframe element with the javascript function has become a part of the HTML sources:  
+In the tab `Inspector` (**Firefox**) or `Elements` (**Chrome**) of the **Web Development Tool**, you will see that the iframe element with the JavaScript function has become a part of the HTML sources:  
 ![5_1_3](screenshots/solution5_1_3.png)  
 
 

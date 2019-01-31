@@ -1,6 +1,6 @@
 # Challenge Collection 4: Sensitive Data Exposure
 
-Use of weak encryption or hashing algorithms might lead to **Sensitive Data Exposure**. The danger of plain text being displayed in data traffic can provoke the discluse of sensitive personal information like user credentials or credit cards information.
+Use of weak encryption or hashing algorithms might lead to **Sensitive Data Exposure**. The danger of plain text being displayed in data traffic can provoke the disclose of sensitive personal information like user credentials or credit cards information.
 
    * [Challenge 4.1: Log in with MC SafeSearch's original password (without SQL injection or changing password)](#challenge-41-log-in-with-mc-safesearchs-original-password-without-sql-injection-or-changing-password)
       * [Tips:](#tips)
@@ -15,7 +15,7 @@ Try to find out the original password of **MC SafeSearch's account**.
 
 ### Tips:
 
-1. **Tip:** Have a look at [Challenge 1.2](https://github.com/nt-ca-aqe/thesis-ahs/tree/master/Challenge%201:%20Broken%20Access%20Control#challenge-12-find-the-admin-page) if you don't know the email.
+1. **Tip:** Have a look at [Challenge 1.2](https://github.com/nt-ca-aqe/thesis-ahs/tree/master/Challenges/Challenge%201:%20Broken%20Access%20Control#challenge-12-find-the-admin-page) if you don't know the email.
 
 2. **Tip:** The **admin section** of the **OWASP Juice Shop** could reveal sensitive data.
 

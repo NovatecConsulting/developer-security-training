@@ -1,6 +1,6 @@
 # Challenge Collection 1: Broken Access Control
 
-**Broken Access Control** comprises security flaws caused by fragile implemented access rights in web applications. The decision whether an user is allowed to call a certain resource depends on factors like the confidentiality of the requested source and the role of the requesting user. However, security gaps in this area are common, because several contents haven't been secured enough in programming. This can lead to horrible consequences, as an unauthorized user is able to take over the administration and obtain, manipulate or delete important and sensitive data.
+**Broken Access Control** comprises security flaws caused by fragile implemented access rights in web applications. The decision whether a user is allowed to call a certain resource depends on factors like the confidentiality of the requested source and the role of the requesting user. However, security gaps in this area are common, because several contents haven't been secured enough in programming. This can lead to horrible consequences, as an unauthorized user is able to take over the administration and obtain, manipulate or delete important and sensitive data.
 
    * [Prepare for the challenges:](#prepare-for-the-challenges)
    * [Challenge 1.1: Find the Score Board with the challenge overview](#challenge-11-find-the-score-board-with-the-challenge-overview)
@@ -31,8 +31,8 @@ Try to find this secret subpage!
 
 2. **Tip:** Have a look at the **Web Development Tools** of **Mozilla Firefox** or **Google Chrome**
 
-3. **Tip:** **Firefox Users**: The tab `Debugger` --> `Sources` of the the **Web Development Tool** will help you.  
-**Google Chrome Users**: The tab `Sources` --> `Page` of the the **Web Development Tool** will help you.
+3. **Tip:** **Firefox Users**: The tab `Debugger` --> `Sources` of the **Web Development Tool** will help you.  
+**Google Chrome Users**: The tab `Sources` --> `Page` of the **Web Development Tool** will help you.
 
 4. **Tip:** The file `main.js` includes important information.
 
@@ -43,17 +43,17 @@ Try to find this subpage!
 
 ### Tips:
 
-1. **Tip:** Have a look at the tips of [Challenge 1.1](https://github.com/nt-ca-aqe/thesis-ahs/tree/master/Challenge%201:%20Broken%20Access%20Control#challenge-11-find-the-score-board-with-the-challenge-overview)
+1. **Tip:** Have a look at the tips of [Challenge 1.1](https://github.com/nt-ca-aqe/thesis-ahs/tree/master/Challenges/Challenge%201:%20Broken%20Access%20Control#challenge-11-find-the-score-board-with-the-challenge-overview)
 
 2. **Tip:** Make sure that you are a user in the **OWASP Juice Shop**
 
 
 ## Challenge 1.3: Make sure that the shop loses all 5-Star ratings
-Try to remove all entrys in the **customer feedback section**, which have a rating of 5 stars.
+Try to remove all entries in the **customer feedback section**, which have a rating of 5 stars.
 
 ### Tips:
 
-1. **Tip:** After solving [challenge 1.2](https://github.com/nt-ca-aqe/thesis-ahs/tree/master/Challenge%201:%20Broken%20Access%20Control#challenge-12-find-the-admin-page), you need only one step to finish this task.
+1. **Tip:** After solving [challenge 1.2](https://github.com/nt-ca-aqe/thesis-ahs/tree/master/Challenges/Challenge%201:%20Broken%20Access%20Control#challenge-12-find-the-admin-page), you need only one step to finish this task.
 
 
 ## Challenge 1.4: Show the basket of another user:
@@ -83,7 +83,7 @@ Submit a comment in the `Contact Us` section in the name of the administrator.
 
 
 ## Challenge 1.6: Change the description of the product "OWASP SSL Advanced Forensic Tool (O-Saft)"
-Replace the description of the product **OWASP SSL Advanced Forensic Tool (O-Saft)**. The description should ony consist of the word `More...`, whichs links to `http://kimminich.de` (the developer of the **OWASP Juice Shop**).
+Replace the description of the product **OWASP SSL Advanced Forensic Tool (O-Saft)**. The description should only consist of the word `More...`, which links to `http://kimminich.de` (the developer of the **OWASP Juice Shop**).
 
 ### Tips:
 

@@ -20,11 +20,11 @@ Log in with the original password of the administrator without SQL injection or 
 
 ### Tips:
 
-1. **Tip:** Have a look at [Challenge 1.2](https://github.com/nt-ca-aqe/thesis-ahs/tree/master/Challenge%201:%20Broken%20Access%20Control#challenge-12-find-the-admin-page) if you don't know the email.
+1. **Tip:** Have a look at [Challenge 1.2](https://github.com/nt-ca-aqe/thesis-ahs/tree/master/Challenges/Challenge%201:%20Broken%20Access%20Control#challenge-12-find-the-admin-page) if you don't know the email.
 
 2. **Tip:** Try to attack the **POST** call on http://localhost:3000/rest/user/login with [OWASP ZAP](https://github.com/zaproxy/zaproxy/wiki/Downloads).
 
-3. **Tip:** You need a wordlist with a top list of the weakest passwords. Browse to https://github.com/danielmiessler/SecLists/tree/master/Passwords.
+3. **Tip:** You need a word list with a top list of the weakest passwords. Browse to https://github.com/danielmiessler/SecLists/tree/master/Passwords.
 
 
 ## Challenge 2.2: Create an administrator account
@@ -54,11 +54,11 @@ Switch to the session of a previously logged in user without reusing his user cr
 
 
 ## Challenge 2.4: Change the password of the user account of Bender
-Change the password of the user account of Bender without using the forgot password mechanism, cracking the password hash or SQL injection. You may use SQL injection for the first login, but the final change of the password sholdn't be a result of this method.
+Change the password of the user account of Bender without using the forgot password mechanism, cracking the password hash or SQL injection. You may use SQL injection for the first login, but the final change of the password shouldn't be a result of this method.
 
 ### Tips:
 
-1. **Tip:** Have a look at [Challenge 1.2](https://github.com/nt-ca-aqe/thesis-ahs/tree/master/Challenge%201:%20Broken%20Access%20Control#challenge-12-find-the-admin-page) if you don't know the email.
+1. **Tip:** Have a look at [Challenge 1.2](https://github.com/nt-ca-aqe/thesis-ahs/tree/master/Challenges/Challenge%201:%20Broken%20Access%20Control#challenge-12-find-the-admin-page) if you don't know the email.
 
 2. **Tip:** Inspect the HTTP calls while interacting with the `change password` mechanism.
 
@@ -70,7 +70,7 @@ Log in with the original user credentials of Bjoern (without SQL injection).
 
 ### Tips:
 
-1. **Tip:** Have a look at [Challenge 1.2](https://github.com/nt-ca-aqe/thesis-ahs/tree/master/Challenge%201:%20Broken%20Access%20Control#challenge-12-find-the-admin-page) if you don't know the email.
+1. **Tip:** Have a look at [Challenge 1.2](https://github.com/nt-ca-aqe/thesis-ahs/tree/master/Challenges/Challenge%201:%20Broken%20Access%20Control#challenge-12-find-the-admin-page) if you don't know the email.
 
 2. **Tip:** Bjoern's encrypted password is not a [MD5](https://en.wikipedia.org/wiki/MD5) hash.
 

@@ -1,4 +1,4 @@
-# Challenge Collection 3: Injection - Solutions
+# Challenge Collection 3: Injection — Solutions
 
    * [Challenge 3.1: Log in as administrator](#challenge-31-log-in-as-administrator)
       * [Variant 1: Causing an internal server error by inserting invalid input](#variant-1-causing-an-internal-server-error-by-inserting-invalid-input)
@@ -13,10 +13,10 @@ Provoke an error by crashing the application with the input `admin@juice-sh.op'`
 
 ![2_1_1](screenshots/solution2_1_1.png)  
 
-There occurs an error `[object Object]`. If you look at the `console`, you will recieve more information  
+There occurs an error `[object Object]`. If you look at the `console`, you will receive more information  
 ![2_1_2](screenshots/solution2_1_2.png)  
 
-There you can recognize the underlying **NoSQL** query in the row `sql`: `SELECT * FROM Users WHERE email = 'admin@juice-sh.op'' AND password = '202cb962ac59075b964b07152d234b70'`. As a consequence of the two apostrophes following the email, the statement now is corrupted. The rest of the statement after the email can be commented out with two hyphen `--`. So, the password won't be compared with the entry in the database.  
+There you can recognize the underlying **NoSQL** query in the row `sql`: `SELECT * FROM Users WHERE email = 'admin@juice-sh.op'' AND password = '202cb962ac59075b964b07152d234b70'`. As a consequence of the two apostrophes following the email, the statement now is corrupted. The rest of the statement after the email can be commented out with two hyphens `--`. So, the password won't be compared with the entry in the database.  
 ![2_1_3](screenshots/solution2_1_3.png)  
 With `admin@juice-sh.op'--` as input and any password, you can access the administrator's account.
 
