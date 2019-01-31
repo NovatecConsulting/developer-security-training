@@ -41,7 +41,7 @@ To perform XSS, use iframe: <code><iframe src="javascript:alert(&grave;xss&grave
 
 1. **Tip:** Try to interact with the **products API**.
 
-2. **Tip:** The process is nearly similar to [Challenge 5.1](https://github.com/nt-ca-aqe/thesis-ahs/tree/master/Challenges/Challenge%205:%20Cross-Site%20Scripting%20(XSS)#challenge-51-persisted-xss-with-postman), so have a look at the tips for this challenge.
+2. **Tip:** The process is nearly similar to [Challenge 5.1](https://github.com/nt-ca-aqe/thesis-ahs/tree/master/Challenges/Challenge%205:%20Cross-Site%20scripting%20(XSS)#challenge-51-persisted-xss-with-postman), so have a look at the tips for this challenge.
 
 3. **Tip:** Consider that you need an **authorization**.
 
