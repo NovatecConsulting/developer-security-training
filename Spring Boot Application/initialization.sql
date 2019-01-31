@@ -20,6 +20,12 @@ CREATE TABLE persistent_logins (
      
 );
 
+CREATE TABLE hibernate_sequences (
+
+    sequence_name VARCHAR(64) NOT NULL,
+    next_val BIGINT NOT NULL
+);
+
 INSERT INTO user_account (USER_ID, USER_NAME, ENCRYPTED_PASSWORD, USER_ROLE, EMAIL, FIRST_NAME, LAST_NAME)
 VALUES (1, 'admin', '$2a$10$PrI5Gk9L.tSZiW9FXhTS8O8Mz9E97k2FZbFvGFFaSsiTUIl.TCrFu', 'ADMIN', 'admin@springboot.com', 'System', 'Admin');
  
