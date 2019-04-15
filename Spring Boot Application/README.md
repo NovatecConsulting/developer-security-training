@@ -6,7 +6,7 @@
 * Apache Maven ([Setup for Linux](https://www.javahelps.com/2017/10/install-apache-maven-on-linux.html))
 
 ## Setup
-1. Clone this repository: `git clone git@github.com:nt-ca-aqe/thesis-ahs.git`
+1. Clone this repository: `git clone https://github.com/nt-ca-aqe/thesis-ahs.git`
 2. Install MySQL: `sudo apt-get install mysql-server`
 3. Start MySQL by entering the following commands:
 `su`
