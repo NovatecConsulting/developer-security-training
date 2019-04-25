@@ -7,14 +7,12 @@
       * [Tips:](#tips)
    * [Challenge 1.2: Find the Admin Page](#challenge-12-find-the-admin-page)
       * [Tips:](#tips-1)
-   * [Challenge 1.3: Make sure that the shop loses all 5-Star ratings](#challenge-13-make-sure-that-the-shop-loses-all-5-star-ratings)
+   * [Challenge 1.3: Show the basket of another user:](#challenge-13-show-the-basket-of-another-user)
       * [Tips:](#tips-2)
-   * [Challenge 1.4: Show the basket of another user:](#challenge-14-show-the-basket-of-another-user)
+   * [Challenge 1.4: Write a comment in the name of another user:](#challenge-14-write-a-comment-in-the-name-of-another-user)
       * [Tips:](#tips-3)
-   * [Challenge 1.5: Write a comment in the name of another user:](#challenge-15-write-a-comment-in-the-name-of-another-user)
+   * [Challenge 1.5: Change the description of the product OWASP SSL Advanced Forensic Tool (O-Saft)](#challenge-15-change-the-description-of-the-product-owasp-ssl-advanced-forensic-tool-o-saft)
       * [Tips:](#tips-4)
-   * [Challenge 1.6: Change the description of the product OWASP SSL Advanced Forensic Tool (O-Saft)](#challenge-16-change-the-description-of-the-product-owasp-ssl-advanced-forensic-tool-o-saft)
-      * [Tips:](#tips-5)
 
 **HINT:** Make sure that you download [Postman](https://www.getpostman.com/apps).
 
@@ -48,15 +46,7 @@ Try to find this subpage!
 2. **Tip:** Make sure that you are a user in the **OWASP Juice Shop**
 
 
-## Challenge 1.3: Make sure that the shop loses all 5-Star ratings
-Try to remove all entries in the **customer feedback section**, which have a rating of 5 stars.
-
-### Tips:
-
-1. **Tip:** After solving [challenge 1.2](https://github.com/nt-ca-aqe/thesis-ahs/tree/master/Challenges/Challenge%201:%20Broken%20Access%20Control#challenge-12-find-the-admin-page), you need only one step to finish this task.
-
-
-## Challenge 1.4: Show the basket of another user:
+## Challenge 1.3: Show the basket of another user:
 Try to show a **basket** of a registered user of the **OWASP Juice Shop** which is not currently logged in.
 
 ### Tips:
@@ -67,7 +57,7 @@ Try to show a **basket** of a registered user of the **OWASP Juice Shop** which 
 **Chrome Users**: The tab `Application` might help you
 
 
-## Challenge 1.5: Write a comment in the name of another user:
+## Challenge 1.4: Write a comment in the name of another user:
 Submit a comment in the `Contact Us` section in the name of the administrator.
 
 ### Tips:
@@ -82,7 +72,7 @@ Submit a comment in the `Contact Us` section in the name of the administrator.
 4. **Tip:** Think about a certain attribute you have to change in the database for modifying the author of the written comment. A search in the sources after the name of this attribute might help you.
 
 
-## Challenge 1.6: Change the description of the product "OWASP SSL Advanced Forensic Tool (O-Saft)"
+## Challenge 1.5: Change the description of the product "OWASP SSL Advanced Forensic Tool (O-Saft)"
 Replace the description of the product **OWASP SSL Advanced Forensic Tool (O-Saft)**. The description should only consist of the word `More...`, which links to `http://kimminich.de` (the developer of the **OWASP Juice Shop**).
 
 ### Tips:

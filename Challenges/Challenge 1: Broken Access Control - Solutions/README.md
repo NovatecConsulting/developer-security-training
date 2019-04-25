@@ -2,10 +2,9 @@
 
    * [Challenge 1.1: Find the Score Board with the challenge overview](#challenge-11-find-the-score-board-with-the-challenge-overview)
    * [Challenge 1.2: Find the Admin Page](#challenge-12-find-the-admin-page)
-   * [Challenge 1.3: Make sure that the shop loses all 5-Star ratings](#challenge-13-make-sure-that-the-shop-loses-all-5-star-ratings)
-   * [Challenge 1.4: Show the basket of another user](#challenge-14-show-the-basket-of-another-user)
-   * [Challenge 1.5: Write a comment in the name of another user:](#challenge-15-write-a-comment-in-the-name-of-another-user)
-   * [Challenge 1.6: Change the description of the product OWASP SSL Advanced Forensic Tool (O-Saft)](#challenge-16-change-the-description-of-the-product-owasp-ssl-advanced-forensic-tool-o-saft)
+   * [Challenge 1.3: Show the basket of another user](#challenge-13-show-the-basket-of-another-user)
+   * [Challenge 1.4: Write a comment in the name of another user:](#challenge-14-write-a-comment-in-the-name-of-another-user)
+   * [Challenge 1.5: Change the description of the product OWASP SSL Advanced Forensic Tool (O-Saft)](#challenge-15-change-the-description-of-the-product-owasp-ssl-advanced-forensic-tool-o-saft)
 
 ## Challenge 1.1: Find the Score Board with the challenge overview
 
@@ -22,20 +21,10 @@ After visiting the Score Board once, a button to return to the Score Board appea
 
 In this case, it is the same procedure as in [Challenge 1.1](https://github.com/nt-ca-aqe/thesis-ahs/tree/master/Challenges/Challenge%201:%20Broken%20Access%20Control%20-%20Solutions#challenge-11-find-the-score-board-with-the-challenge-overview): Open the **Web Development Tool** and select tab `Debugger` (Firefox) or `Sources` (Chrome). Open `main.js` and search after something like `admin`. You will find a path named `administration`:
 
-![1_2_1](screenshots/solution1_2_1.png)  
-
-Browse to http://localhost:3000/#/administration to explore the **administration section**.
-
-**Hint:** Make sure you have created an account before and are logged in. Otherwise, you won't see the entire content of the **administration section**.
+![1_2_1](screenshots/solution1_2_1.png)
 
 
-## Challenge 1.3: Make sure that the shop loses all 5-Star ratings
-
-After solving [Challenge 1.2](https://github.com/nt-ca-aqe/thesis-ahs/tree/master/Challenges/Challenge%201:%20Broken%20Access%20Control#challenge-12-find-the-admin-page), go to the **administration section**. In the table `Customer Feedback`, you have to delete the first entry of user `1` by clicking on the garbage can icon:
-![1_3](screenshots/solution1_3.png)  
-
-
-## Challenge 1.4: Show the basket of another user
+## Challenge 1.3: Show the basket of another user
 
 You have to be logged in (no matter, which user you are). In this case, the logged in account has been registered before via the register site.
 Open the **Web Development Tool** and select tab `Storage` in **Firefox** (In this case, **Chrome** users should switch, as the process is easier to manage in **Firefox**). Navigate to `Session Storage` --> `http://localhost:3000`.  
@@ -64,7 +53,7 @@ So, there is the opportunity that user 1 in the table has also UserId 1. To chec
 ![1_4_8](screenshots/solution1_4_8.png)  
 In the top, you can see the email `admin@juice-sh.op` next to the topic `Your Basket`. So now, the admin is logged in the application and regards his own basket.
 
-## Challenge 1.5: Write a comment in the name of another user:
+## Challenge 1.4: Write a comment in the name of another user:
 Browse to http://localhost:3000/#/contact.
 Open the **Web Development Tool** and navigate to tab `Inspector` in **Firefox** or `Elements` in **Chrome**:
 ![1_5_1](screenshots/solution1_5_1.png)  
@@ -73,7 +62,7 @@ After editing the source, an input field appears above the `Author`:
 
 ![1_5_2](screenshots/solution1_5_2.png)  
 
-Fill in a `1` in this field, as the administrator of the juice shop has this UserId (You will know this fact if you have solved [Challenge 1.4](https://github.com/nt-ca-aqe/thesis-ahs/tree/master/Challenges/Challenge%201:%20Broken%20Access%20Control%20-%20Solutions#challenge-14-show-the-basket-of-another-user) before). Complete the remaining input fields and submit your comment:
+Fill in a `1` in this field, as the administrator of the juice shop has this UserId (You will know this fact if you have solved [Challenge 1.3](https://github.com/nt-ca-aqe/thesis-ahs/tree/master/Challenges/Challenge%201:%20Broken%20Access%20Control%20-%20Solutions#challenge-13-show-the-basket-of-another-user) before). Complete the remaining input fields and submit your comment:
 
 ![1_5_3](screenshots/solution1_5_3.png)  
 
@@ -86,7 +75,7 @@ You recognize the **POST** call `http://localhost:3000/api/Feedbacks`. Type this
 ![1_5_5](screenshots/solution1_5_5.png)  
 
 
-## Challenge 1.6: Change the description of the product "OWASP SSL Advanced Forensic Tool (O-Saft)"
+## Challenge 1.5: Change the description of the product "OWASP SSL Advanced Forensic Tool (O-Saft)"
 
 Type `OWASP SSL Advanced Forensic Tool (O-Saft)` in the search bar and open the product information while capturing the HTTP traffic in the `console` of the **Web Development Tool.**  
 
