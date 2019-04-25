@@ -5,9 +5,29 @@ After introducing the Open Web Application Security Project Top 10 (OWASP Top 10
 The descriptions of these challenges are in the folder **Challenges**.
 Also, you have the opportunity to view a Spring Boot Application, which shows the best practice for implementing those functions which are implemented with security flaws in OWASP Juice Shop: Go to folder **Spring Boot Application** to run this app.
 
+## Learning targets
+1. Understand basic security terminology
+2. Understand importance of security
+3. OWASP
+   1. What is it?
+   2. What does OWASP offer? (Projects)
+   3. Highlight one of the most popular and important project: OWASP Top 10
+4. Insights on a selected set of static and dynamic application security testing tools
+5. Finding and exploiting vulnerabilities to understand the impact they could cause
+6. Fixing/avoiding specific security issues
+
 ## Presentation
 
-[Presentation](https://ahsnt.github.io/revealjs/)
+[Presentation](https://nt-ca-aqe.github.io/developer-security-training/)
+
+### Table of contents
+1. Definitions
+2. IT Security
+3. Open Web Application Security Project (OWASP)
+4. OWASP Juice Shop
+5. Security Tools
+6. Spring Boot Application
+7. Selected Security Risks
 
 ## Useful links
 
