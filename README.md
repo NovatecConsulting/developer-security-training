@@ -27,12 +27,12 @@ Also, you have the opportunity to view a Spring Boot Application, which shows th
 4. OWASP Juice Shop 
 5. Security Tools
 6. Spring Boot Application
-7. Selected Security Risks
-   * [Challenge 1: Broken Access Control](Challenge-1/README.md)
-   * [Challenge 2: Broken Authentication](Challenge-2/README.md)
-   * [Challenge 3: Injection](Challenge-3/README.md)
-   * [Challenge 4: Sensitive Data Exposure](Challenge-4/README.md)
-   * [Challenge 5: Cross-Site Scripting (XSS)](Challenge-5/README.md)
+7. [Selected Security Risks](Challenges/README.md)
+   * [Challenge 1: Broken Access Control](Challenges/Challenge-1/README.md)
+   * [Challenge 2: Broken Authentication](Challenges/Challenge-2/README.md)
+   * [Challenge 3: Injection](Challenges/Challenge-3/README.md)
+   * [Challenge 4: Sensitive Data Exposure](Challenges/Challenge-4/README.md)
+   * [Challenge 5: Cross-Site Scripting (XSS)](Challenges/Challenge-5/README.md)
 
 
 ## Useful links
