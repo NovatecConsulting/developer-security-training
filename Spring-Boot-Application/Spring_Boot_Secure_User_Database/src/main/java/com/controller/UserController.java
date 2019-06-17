@@ -10,37 +10,34 @@ import org.springframework.http.MediaType;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.WebDataBinder;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.InitBinder;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import javax.annotation.PostConstruct;
 import java.security.Principal;
 import java.util.List;
 
 @Controller
-public class MainController {
+public class UserController {
+
+    private final UserService userService;
+
+    private final UserAccountValidator userAccountValidator;
 
     @Autowired
-    private UserService userService;
-
-    @Autowired
-    private UserAccountValidator userAccountValidator;
-
-    @Autowired
-    private PasswordEncoder passwordEncoder;
-
-    private final InMemoryUserDetailsManager inMemoryUserDetailsManager;
-
-    @Autowired
-    public MainController(InMemoryUserDetailsManager inMemoryUserDetailsManager) {
-        this.inMemoryUserDetailsManager = inMemoryUserDetailsManager;
+    public UserController(UserService userService,
+                          UserAccountValidator userAccountValidator) {
+        this.userService = userService;
+        this.userAccountValidator = userAccountValidator;
     }
 
     @InitBinder
@@ -55,38 +52,21 @@ public class MainController {
         }
     }
 
-    @PostConstruct
-    public void setUserAccounts() {
-        UserDetails u1 = User.withUsername("admin").password(passwordEncoder.encode("$ecUr€84")).roles("ADMIN").build();
-        UserDetails u2 = User.withUsername("standarduser").password(passwordEncoder.encode("$ecUr€84")).roles("USER").build();
-        inMemoryUserDetailsManager.createUser(u1);
-        inMemoryUserDetailsManager.createUser(u2);
-
-        List<UserAccount> userAccountList = userService.getAllUsersByUserName();
-        for (int i = 2; i < userAccountList.size(); i++) {
-            inMemoryUserDetailsManager.createUser(User
-                    .withUsername(userAccountList.get(i).getUserName())
-                    .password(userAccountList.get(i).getEncrytedPassword())
-                    .roles(userAccountList.get(i).getUserRole())
-                    .build());
-        }
-    }
-
-    @RequestMapping("/")
+    @GetMapping("/")
     public String viewHome(Model model) {
 
         return "home";
     }
 
-    @RequestMapping(value = "/usersearch", method = RequestMethod.GET)
+    @GetMapping(value = "/usersearch")
     public String search(@RequestParam(value = "searchInput", required = false) String searchTerm, Model model) {
-        UserAccount userAccount = userService.getUserByUsername(searchTerm);
+        UserAccount userAccount = userService.getUserByUsernameIgnoreCase(searchTerm);
 
         model.addAttribute("searchInput", userAccount);
         return "userSearch";
     }
 
-    @RequestMapping(value = "/userInfo", method = RequestMethod.GET)
+    @GetMapping(value = "/userInfo")
     public String userInfo(Model model, Principal principal) {
         User user = (User) ((Authentication) principal).getPrincipal();
         UserAccount userAccount = userService.getUserByUsername(user.getUsername());
@@ -96,33 +76,33 @@ public class MainController {
         return "userInfo";
     }
 
-    @RequestMapping(value = "/admin", method = RequestMethod.GET)
+    @GetMapping(value = "/admin")
     public String adminPage(Model model, Principal principal) {
         User user = (User) ((Authentication) principal).getPrincipal();
 
         String userInfo = WebUtils.toString(user);
         model.addAttribute("userInfo", userInfo);
 
-        List<UserAccount> list = userService.getAllUsersByUserName();
+        List<UserAccount> list = userService.getAllUsers();
         model.addAttribute("userAccountList", list);
 
         return "admin";
     }
 
-    @RequestMapping(value = "/login", method = RequestMethod.GET)
+    @GetMapping(value = "/login")
     public String loginPage(Model model) {
 
         return "login";
     }
 
-    @RequestMapping(value = "/logoutSuccessful", method = RequestMethod.GET)
+    @GetMapping(value = "/logoutSuccessful")
     public String logoutSuccessful(Model model) {
         model.addAttribute("title", "Logout");
         return "logoutSuccessful";
     }
 
 
-    @RequestMapping(value = "/registration", method = RequestMethod.GET)
+    @GetMapping(value = "/registration")
     public String viewRegister(Model model) {
         UserAccountForm form = new UserAccountForm();
 
@@ -131,12 +111,12 @@ public class MainController {
         return "registration";
     }
 
-    @RequestMapping("/registrationSuccessful")
+    @GetMapping("/registrationSuccessful")
     public String viewRegistrationSuccessful(Model model) {
         return "registrationSuccessful";
     }
 
-    @RequestMapping(value = "/403", method = RequestMethod.GET)
+    @GetMapping(value = "/403")
     public String accessDenied(Model model, Principal principal) {
         if (principal != null) {
             User user = (User) ((Authentication) principal).getPrincipal();
@@ -152,7 +132,7 @@ public class MainController {
         return "403Page";
     }
 
-    @RequestMapping(value = "/registration", method = RequestMethod.POST)
+    @PostMapping(value = "/registration")
     public String saveRegister(Model model,
                                @ModelAttribute("userAccountForm") @Validated UserAccountForm userAccountForm, //
                                BindingResult result, final RedirectAttributes redirectAttributes) {
@@ -160,7 +140,7 @@ public class MainController {
             return "registration";
         }
 
-        UserAccount newUser = null;
+        UserAccount newUser;
 
         try {
             newUser = userService.createUser(userAccountForm);
@@ -174,15 +154,14 @@ public class MainController {
         userService.saveUser(newUser);
 
         UserDetails u1 = User.withUsername(newUser.getUserName()).password(newUser.getEncrytedPassword()).roles("USER").build();
-        inMemoryUserDetailsManager.createUser(u1);
 
         return "redirect:/registrationSuccessful";
     }
 
-    @RequestMapping(value = "/api/useraccounts", method = RequestMethod.GET,
-            produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
+    @GetMapping(value = "/api/useraccounts",
+            produces = {MediaType.APPLICATION_JSON_VALUE})
     @ResponseBody
     public List<UserAccount> getUserAccounts() {
-        return userService.getAllUsersByUserName();
+        return userService.getAllUsers();
     }
 }

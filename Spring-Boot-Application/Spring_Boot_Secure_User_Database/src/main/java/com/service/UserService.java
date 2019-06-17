@@ -1,36 +1,53 @@
 package com.service;
 
-import com.dao.UserDAO;
 import com.dao.UserRepository;
 import com.model.UserAccount;
 import com.model.UserAccountForm;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.UUID;
 
 @Service
+@Transactional(readOnly = true)
 public class UserService {
 
-    @Autowired
-    private UserRepository userRepository;
+    private final UserRepository userRepository;
+    private final PasswordEncoder passwordEncoder;
 
-    @Autowired
-    private UserDAO userDAO;
+    public UserService(UserRepository userRepository, PasswordEncoder passwordEncoder) {
+        this.userRepository = userRepository;
+        this.passwordEncoder = passwordEncoder;
+    }
 
+    @Transactional
     public void saveUser(UserAccount user) {
         userRepository.save(user);
     }
 
-    public List<UserAccount> getAllUsersByUserName() {
-        return userDAO.getAllUsersByUserName();
+    @PreAuthorize("hasRole('ADMIN')")
+    public List<UserAccount> getAllUsers() {
+        return userRepository.findAll();
     }
 
     public UserAccount getUserByUsername(String searchTerm) {
-        return userDAO.getUserByUserName(searchTerm);
+        return userRepository.findOneByUserName(searchTerm);
     }
 
+    @PreAuthorize("isFullyAuthenticated()")
+    public UserAccount getUserByUsernameIgnoreCase(String searchTerm) {
+        return userRepository.findOneByUserNameIgnoreCase(searchTerm);
+    }
+
+    @Transactional
     public UserAccount createUser(UserAccountForm userAccountForm) {
-        return userDAO.createUser(userAccountForm);
+        UUID userId = UUID.randomUUID();
+        String encrytedPassword = this.passwordEncoder.encode(userAccountForm.getPassword());
+        UserAccount user = new UserAccount(userId, userAccountForm.getUserName(), userAccountForm.getFirstName(), userAccountForm.getLastName(),
+                "USER", userAccountForm.getEmail(), encrytedPassword);
+        return userRepository.save(user);
     }
 }

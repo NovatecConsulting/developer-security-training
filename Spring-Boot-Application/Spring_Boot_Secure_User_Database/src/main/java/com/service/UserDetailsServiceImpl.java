@@ -1,6 +1,5 @@
 package com.service;
 
-import com.dao.UserDAO;
 import com.model.UserAccount;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.User;
@@ -12,19 +11,21 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
 
-    @Autowired
-    private UserDAO userDAO;
+    private final UserService userService;
+
+    public UserDetailsServiceImpl(UserService userService) {
+        this.userService = userService;
+    }
 
     @Override
     public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
-        UserAccount user = this.userDAO.getUserByUserName(userName);
+        UserAccount user = this.userService.getUserByUsername(userName);
 
         if (user == null) {
             throw new UsernameNotFoundException("UserAccount " + userName + " was not found in the database");
         }
 
-        UserDetails userDetails = User.withUsername(user.getUserName()).password(user.getEncrytedPassword()).roles(user.getUserRole()).build();
-        return userDetails;
+        return User.withUsername(user.getUserName()).password(user.getEncrytedPassword()).roles(user.getUserRole()).build();
     }
 }
 

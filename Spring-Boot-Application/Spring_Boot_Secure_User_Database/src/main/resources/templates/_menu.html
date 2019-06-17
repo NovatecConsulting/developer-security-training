@@ -11,7 +11,8 @@
                                                   class="active">Registration</a></li>
         <li class="navbar" style="float:right"><a th:if="${#request.userPrincipal == null}"
                                                   th:href="@{/login}">Login</a></li>
-        <li class="navbar" style="float:right"><a th:if="${#request.userPrincipal != null}"
-                                                  th:href="@{/logout}">Logout</a></li>
+        <li class="navbar" style="float:right"><form th:if="${#request.userPrincipal != null}" th:action="@{/logout}" method="POST">
+            <input type="submit" class="btn btn-link" value="Logout"/>
+        </form></li>
     </ul>
 </div>

@@ -1,10 +1,13 @@
 package com.validator;
 
-import com.dao.UserDAO;
+import com.dao.UserRepository;
 import com.model.UserAccount;
 import com.model.UserAccountForm;
 import org.apache.commons.validator.routines.EmailValidator;
 import org.passay.*;
+import org.passay.dictionary.ArrayWordList;
+import org.passay.dictionary.WordListDictionary;
+import org.passay.dictionary.sort.ArraysSort;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
@@ -17,7 +20,7 @@ import java.util.Arrays;
 public class UserAccountValidator implements Validator {
 
     @Autowired
-    private UserDAO userDAO;
+    private UserRepository userRepository;
 
     private EmailValidator emailValidator = EmailValidator.getInstance();
 
@@ -44,14 +47,14 @@ public class UserAccountValidator implements Validator {
         if (!this.emailValidator.isValid(emailInput) && !emailInput.trim().equals("")) {
             errors.rejectValue("email", "Pattern.userAccountForm.email");
         } else if (userAccountForm.getUserId() == null) {
-            UserAccount userAccount = userDAO.getUserByEmail(emailInput);
+            UserAccount userAccount = userRepository.findOneByEmail(emailInput);
             if (userAccount != null) {
                 errors.rejectValue("email", "Duplicate.userAccountForm.email");
             }
         }
 
         if (!errors.hasFieldErrors("userName")) {
-            UserAccount dbUser = userDAO.getUserByUserName(userNameInput);
+            UserAccount dbUser = userRepository.findOneByUserNameIgnoreCase(userNameInput);
             if (dbUser != null) {
                 // Username is not available.
                 errors.rejectValue("userName", "Duplicate.userAccountForm.userName");
@@ -76,16 +79,18 @@ public class UserAccountValidator implements Validator {
     private boolean isPasswordValid(final String password, Errors errors) {
         final PasswordValidator validator = new PasswordValidator(Arrays.asList(
                 new LengthRule(8, 30),
-                new UppercaseCharacterRule(1),
-                new DigitCharacterRule(1),
-                new SpecialCharacterRule(1)));
+                new CharacterRule(EnglishCharacterData.UpperCase, 1),
+                new CharacterRule(EnglishCharacterData.LowerCase, 1),
+                new CharacterRule(EnglishCharacterData.Digit, 1),
+                new CharacterRule(EnglishCharacterData.Special, 1),
+                new WhitespaceRule(),
+                new DictionaryRule(new WordListDictionary(new ArrayWordList(
+                        new String[] {"password", "Password", "123456", "12345678", "admin", "geheim", "secret"},
+                        false, new ArraysSort())))));
         final RuleResult result = validator.validate(new PasswordData(password));
         for (int i = 0; i < result.getDetails().size(); i++) {
             errors.rejectValue("password", result.getDetails().get(i).getErrorCode());
         }
-        if (result.isValid()) {
-            return true;
-        }
-        return false;
+        return result.isValid();
     }
 }

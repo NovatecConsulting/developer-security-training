@@ -30,6 +30,11 @@ body {
     color: black;
 }
 
+.navbar input:hover {
+    background-color: #ddd;
+    color: black;
+}
+
 .navbar-right {
     float: right;
 }
@@ -48,12 +53,28 @@ body {
     float: left;
 }
 
+.navbar li form {
+    float: left;
+    background-color: #00b200;
+}
+
 .navbar li a {
     display: block;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+}
+
+.navbar li form input {
+    display: block;
+    color: white;
+    font: 16px Arial, Helvetica, sans-serif;
+    margin: 0px 0px;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color: #00b200;
 }
 
 table th, table td {

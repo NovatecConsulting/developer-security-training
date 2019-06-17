@@ -18,11 +18,9 @@
 <form name='f' th:action="@{/j_spring_security_check}" method='POST'>
     <div class="registration-form">
         <label for="userName"><b>Username</b></label>
-        <input type='text' name='username' value='' minlength="2" maxlength="36" placeholder="Username"><br/><br/>
+        <input type='text' name='username' id="userName" value='' minlength="2" maxlength="36" placeholder="Username"><br/><br/>
         <label for="password"><b>Password</b></label>
-        <input type='password' name='password' maxlength="30" placeholder="Password"/><br/><br/>
-        <b>Remember Me?</b>
-        <input type="checkbox" name="remember-me"/><br/><br/>
+        <input type='password' name='password' id="password" maxlength="30" placeholder="Password"/><br/><br/>
         <input name="submit" type="submit" value="Login" class="btn"/>
     </div>
 </form>

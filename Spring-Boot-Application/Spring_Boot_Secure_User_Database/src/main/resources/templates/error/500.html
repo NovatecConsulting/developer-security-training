@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.css}"/>
+    <title>Internal Error</title>
+</head>
+
+<body>
+<th:block th:include="/_menu"></th:block>
+
+<h2>Internal Error</h2>
+
+<p>An internal server error occurred</p>
+
+<h3 th:if="${message != null}" th:text="${message}" style="color: red;"></h3>
+
+</body>
+
+</html>

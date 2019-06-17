@@ -1,40 +1,48 @@
 package com.model;
 
+import org.springframework.data.jpa.domain.AbstractPersistable;
+
 import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+import java.util.UUID;
 
 @Entity
-@Table(name = "USER_ACCOUNT")
-@TableGenerator(name = "tab", initialValue = 2, allocationSize = 1)
-public class UserAccount {
+public class UserAccount extends AbstractPersistable<Long> {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.TABLE, generator = "tab")
-    @Column(name = "USER_ID", nullable = false)
-    private Long userId;
+    private UUID userId;
 
-    @Column(name = "USER_NAME", length = 36, nullable = false)
+    @NotNull
+    @Size(min = 1, max = 36)
     private String userName;
 
-    @Column(name = "FIRST_NAME", length = 36, nullable = false)
+    @NotNull
+    @Size(min = 1, max = 36)
     private String firstName;
 
-    @Column(name = "LAST_NAME", length = 36, nullable = false)
+    @NotNull
+    @Size(min = 1, max = 36)
     private String lastName;
 
-    @Column(name = "USER_ROLE", length = 36, nullable = false)
+    @NotNull
+    @Size(min = 1, max = 36)
     private String userRole;
 
-    @Column(name = "EMAIL", length = 36, nullable = false)
+    @NotNull
+    @Email
+    @Size(min = 1, max = 36)
     private String email;
 
-    @Column(name = "ENCRYPTED_PASSWORD", length = 128, nullable = false)
+    @NotNull
+    @Size(min = 1, max = 128)
     private String encrytedPassword;
 
     public UserAccount() {
 
     }
 
-    public UserAccount(Long userId, String userName, String firstName, String lastName, //
+    public UserAccount(UUID userId, String userName, String firstName, String lastName, //
                        String userRole, String email, String encrytedPassword) {
         super();
         this.userId = userId;
@@ -46,11 +54,11 @@ public class UserAccount {
         this.encrytedPassword = encrytedPassword;
     }
 
-    public Long getUserId() {
+    public UUID getUserId() {
         return userId;
     }
 
-    public void setUserId(Long userId) {
+    public void setUserId(UUID userId) {
         this.userId = userId;
     }
 
