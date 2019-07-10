@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.css}"/>
+    <script type="text/javascript" th:src="@{/js/usersearch.js}"></script>
+    <title>User Search</title>
+</head>
+
+<body>
+
+<th:block th:include="/_menu"></th:block>
+
+<h2>User Search</h2>
+<form action="#" th:action="@{/searchaction}" th:object="${searchInput}" method="post">
+    <label for="searchInput">Type in a username to view information:</label><br/><br/>
+    <input name="searchInput" id="searchInput" size="40" placeholder="Username" class="searchInput" th:field="*{searchTerm}"><br/><br/>
+    <button type="submit" class="btn-search">Search</button>
+</form>
+<span th:text="${error}" th:if="${error}"></span>
+</body>
+</html>

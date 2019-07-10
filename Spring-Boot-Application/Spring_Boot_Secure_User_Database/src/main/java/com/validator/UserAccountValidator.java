@@ -5,6 +5,7 @@ import com.model.UserAccount;
 import com.model.UserAccountForm;
 import org.apache.commons.validator.routines.EmailValidator;
 import org.passay.CharacterRule;
+import org.passay.DictionaryRule;
 import org.passay.DictionarySubstringRule;
 import org.passay.EnglishCharacterData;
 import org.passay.LengthRule;
@@ -63,7 +64,7 @@ public class UserAccountValidator implements Validator {
                 new CharacterRule(EnglishCharacterData.Digit, 1),
                 new CharacterRule(EnglishCharacterData.Special, 1),
                 new WhitespaceRule(),
-                new DictionarySubstringRule(new WordListDictionary(wordList))));
+                new DictionaryRule(new WordListDictionary(wordList))));
     }
 
     @Override

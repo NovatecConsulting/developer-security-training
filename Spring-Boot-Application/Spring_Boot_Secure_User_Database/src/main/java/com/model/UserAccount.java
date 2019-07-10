@@ -1,16 +1,19 @@
 package com.model;
 
+import org.owasp.encoder.Encode;
 import org.springframework.data.jpa.domain.AbstractPersistable;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.security.spec.EncodedKeySpec;
 import java.util.UUID;
 
 @Entity
 public class UserAccount extends AbstractPersistable<Long> {
 
+    @NotNull
     private UUID userId;
 
     @NotNull
@@ -64,7 +67,7 @@ public class UserAccount extends AbstractPersistable<Long> {
     }
 
     public String getUserName() {
-        return userName;
+        return Encode.forHtml(userName);
     }
 
     public void setUserName(String userName) {
@@ -72,7 +75,7 @@ public class UserAccount extends AbstractPersistable<Long> {
     }
 
     public String getFirstName() {
-        return firstName;
+        return Encode.forHtml(firstName);
     }
 
     public void setFirstName(String firstName) {
@@ -80,7 +83,7 @@ public class UserAccount extends AbstractPersistable<Long> {
     }
 
     public String getLastName() {
-        return lastName;
+        return Encode.forHtml(lastName);
     }
 
     public void setLastName(String lastName) {
@@ -96,7 +99,7 @@ public class UserAccount extends AbstractPersistable<Long> {
     }
 
     public String getEmail() {
-        return email;
+        return Encode.forHtml(email);
     }
 
     public void setEmail(String email) {

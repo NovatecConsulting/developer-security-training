@@ -2,6 +2,7 @@ package com.controller;
 
 import com.model.UserAccount;
 import com.model.UserAccountForm;
+import com.model.UserSearchData;
 import com.service.UserService;
 import com.util.WebUtils;
 import com.validator.UserAccountValidator;
@@ -19,10 +20,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import javax.validation.Valid;
 import java.security.Principal;
 import java.util.List;
 
@@ -58,15 +61,28 @@ public class UserController {
 
     @GetMapping("/")
     public String viewHome() {
-
         return "home";
     }
 
     @GetMapping(value = "/usersearch")
-    public String search(@RequestParam(value = "searchInput", required = false) String searchTerm, Model model) {
-        UserAccount userAccount = userService.getUserByUsernameIgnoreCase(searchTerm);
+    public String search(Model model) {
+        model.addAttribute("searchInput", new UserSearchData());
+        return "userSearchForm";
+    }
 
-        model.addAttribute("searchInput", userAccount);
+    @PostMapping(path = "/searchaction")
+    public String searchAction(@ModelAttribute @Valid UserSearchData userSearchData,
+                               BindingResult result, Model model, final RedirectAttributes redirectAttributes) {
+        if (result.hasErrors()) {
+            redirectAttributes.addFlashAttribute("error", result.getFieldError().getField()
+                    + ": " + result.getFieldError().getDefaultMessage());
+            return "redirect:/usersearch";
+        }
+        UserAccount user = userService.getUserByUsernameIgnoreCase(userSearchData.getSearchTerm());
+        if (user != null) {
+            model.addAttribute("searchResult", user);
+        }
+        model.addAttribute("searchInput", userSearchData.getSearchTerm());
         return "userSearch";
     }
 
