@@ -20,7 +20,7 @@ Log in with the original password of the administrator without SQL injection or 
 
 ### Tips:
 
-1. **Tip:** Have a look at [Challenge 1.2](https://github.com/nt-ca-aqe/thesis-ahs/tree/master/Challenges/Challenge%201:%20Broken%20Access%20Control#challenge-12-find-the-admin-page) if you don't know the email.
+1. **Tip:** His email is admin@juice-sh.op.
 
 2. **Tip:** Try to attack the **POST** call on http://localhost:3000/rest/user/login with [OWASP ZAP](https://github.com/zaproxy/zaproxy/wiki/Downloads).
 
