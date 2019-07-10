@@ -58,7 +58,7 @@ Change the password of the user account of Bender without using the forgot passw
 
 ### Tips:
 
-1. **Tip:** Have a look at [Challenge 1.2](https://github.com/nt-ca-aqe/thesis-ahs/tree/master/Challenges/Challenge%201:%20Broken%20Access%20Control#challenge-12-find-the-admin-page) if you don't know the email.
+1. **Tip:** His email is bender@juice-sh.op.
 
 2. **Tip:** Inspect the HTTP calls while interacting with the `change password` mechanism.
 
@@ -70,7 +70,7 @@ Log in with the original user credentials of Bjoern (without SQL injection).
 
 ### Tips:
 
-1. **Tip:** Have a look at [Challenge 1.2](https://github.com/nt-ca-aqe/thesis-ahs/tree/master/Challenges/Challenge%201:%20Broken%20Access%20Control#challenge-12-find-the-admin-page) if you don't know the email.
+1. **Tip:** His email is bjoern@juice-sh.op.
 
 2. **Tip:** Bjoern's encrypted password is not a [MD5](https://en.wikipedia.org/wiki/MD5) hash.
 
