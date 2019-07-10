@@ -23,8 +23,7 @@ To perform XSS, use iframe: <code><iframe src="javascript:alert(&grave;xss&grave
 
 1. **Tip:** Try to interact with the **users API**.
 
-2. **Tip:** If you have solved Challenge [2.2](https://github.com/nt-ca-aqe/thesis-ahs/tree/master/Challenges/Challenge%202:%20Broken%20Authentication#challenge-22-create-an-administrator-account) or 
-[4.1](https://github.com/nt-ca-aqe/thesis-ahs/tree/master/Challenges/Challenge%204:%20Sensitive%20Data%20Exposure#challenge-41-log-in-with-mc-safesearchs-original-password-without-sql-injection-or-changing-password), you will know how to interact with the **users API**.
+2. **Tip:** If you have solved Challenge [2.2](https://github.com/nt-ca-aqe/developer-security-training/tree/master/Challenges/Challenge-2#challenge-22-create-an-administrator-account), you will know how to interact with the **users API**.
 
 3. **Tip:** You have to send a **POST** call.
 
@@ -41,7 +40,7 @@ To perform XSS, use iframe: <code><iframe src="javascript:alert(&grave;xss&grave
 
 1. **Tip:** Try to interact with the **products API**.
 
-2. **Tip:** The process is nearly similar to [Challenge 5.1](https://github.com/nt-ca-aqe/thesis-ahs/tree/master/Challenges/Challenge%205:%20Cross-Site%20scripting%20(XSS)#challenge-51-persisted-xss-with-postman), so have a look at the tips for this challenge.
+2. **Tip:** The process is nearly similar to [Challenge 5.1](https://github.com/nt-ca-aqe/developer-security-training/tree/master/Challenges/Challenge-5#challenge-51-persisted-xss-with-postman), so have a look at the tips for this challenge.
 
 3. **Tip:** Consider that you need an **authorization**.
 

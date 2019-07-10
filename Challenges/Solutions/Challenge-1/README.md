@@ -19,7 +19,7 @@ After visiting the Score Board once, a button to return to the Score Board appea
 
 ## Challenge 1.2: Find the Admin Page
 
-In this case, it is the same procedure as in [Challenge 1.1](https://github.com/nt-ca-aqe/thesis-ahs/tree/master/Challenges/Challenge%201:%20Broken%20Access%20Control%20-%20Solutions#challenge-11-find-the-score-board-with-the-challenge-overview): Open the **Web Development Tool** and select tab `Debugger` (Firefox) or `Sources` (Chrome). Open `main.js` and search after something like `admin`. You will find a path named `administration`:
+In this case, it is the same procedure as in [Challenge 1.1](https://github.com/nt-ca-aqe/developer-security-training/tree/master/Challenges/Challenge-1#challenge-11-find-the-score-board-with-the-challenge-overview): Open the **Web Development Tool** and select tab `Debugger` (Firefox) or `Sources` (Chrome). Open `main.js` and search after something like `admin`. You will find a path named `administration`:
 
 ![1_2_1](screenshots/solution1_2_1.png)
 
@@ -62,7 +62,7 @@ After editing the source, an input field appears above the `Author`:
 
 ![1_5_2](screenshots/solution1_5_2.png)  
 
-Fill in a `1` in this field, as the administrator of the juice shop has this UserId (You will know this fact if you have solved [Challenge 1.3](https://github.com/nt-ca-aqe/thesis-ahs/tree/master/Challenges/Challenge%201:%20Broken%20Access%20Control%20-%20Solutions#challenge-13-show-the-basket-of-another-user) before). Complete the remaining input fields and submit your comment:
+Fill in a `1` in this field, as the administrator of the juice shop has this UserId (You will know this fact if you have solved [Challenge 1.3](https://github.com/nt-ca-aqe/developer-security-training/tree/master/Challenges/Solutions/Challenge-1#challenge-13-show-the-basket-of-another-user) before). Complete the remaining input fields and submit your comment:
 
 ![1_5_3](screenshots/solution1_5_3.png)  
 

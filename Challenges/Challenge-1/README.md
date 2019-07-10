@@ -41,7 +41,7 @@ Try to find this subpage!
 
 ### Tips:
 
-1. **Tip:** Have a look at the tips of [Challenge 1.1](https://github.com/nt-ca-aqe/thesis-ahs/tree/master/Challenges/Challenge%201:%20Broken%20Access%20Control#challenge-11-find-the-score-board-with-the-challenge-overview)
+1. **Tip:** Have a look at the tips of [Challenge 1.1](https://github.com/nt-ca-aqe/developer-security-training/tree/master/Challenges/Challenge-1#challenge-11-find-the-score-board-with-the-challenge-overview)
 
 2. **Tip:** Make sure that you are a user in the **OWASP Juice Shop**
 
