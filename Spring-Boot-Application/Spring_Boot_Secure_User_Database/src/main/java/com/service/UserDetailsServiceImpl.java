@@ -1,7 +1,6 @@
 package com.service;
 
 import com.model.UserAccount;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -25,7 +24,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
             throw new UsernameNotFoundException("UserAccount " + userName + " was not found in the database");
         }
 
-        return User.withUsername(user.getUserName()).password(user.getEncrytedPassword()).roles(user.getUserRole()).build();
+        return User.withUsername(user.getUserName()).password(user.getEncryptedPassword()).roles(user.getUserRole()).build();
     }
 }
 

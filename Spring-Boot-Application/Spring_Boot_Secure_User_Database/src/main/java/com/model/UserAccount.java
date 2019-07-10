@@ -36,14 +36,15 @@ public class UserAccount extends AbstractPersistable<Long> {
 
     @NotNull
     @Size(min = 1, max = 128)
-    private String encrytedPassword;
+    private String encryptedPassword;
 
+    @SuppressWarnings("unused")
     public UserAccount() {
 
     }
 
     public UserAccount(UUID userId, String userName, String firstName, String lastName, //
-                       String userRole, String email, String encrytedPassword) {
+                       String userRole, String email, String encryptedPassword) {
         super();
         this.userId = userId;
         this.userName = userName;
@@ -51,7 +52,7 @@ public class UserAccount extends AbstractPersistable<Long> {
         this.lastName = lastName;
         this.userRole = userRole;
         this.email = email;
-        this.encrytedPassword = encrytedPassword;
+        this.encryptedPassword = encryptedPassword;
     }
 
     public UUID getUserId() {
@@ -102,11 +103,11 @@ public class UserAccount extends AbstractPersistable<Long> {
         this.email = email;
     }
 
-    public String getEncrytedPassword() {
-        return encrytedPassword;
+    public String getEncryptedPassword() {
+        return encryptedPassword;
     }
 
-    public void setEncrytedPassword(String encrytedPassword) {
-        this.encrytedPassword = encrytedPassword;
+    public void setEncryptedPassword(String encryptedPassword) {
+        this.encryptedPassword = encryptedPassword;
     }
 }

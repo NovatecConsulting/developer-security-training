@@ -5,11 +5,11 @@ import com.model.UserAccountForm;
 import com.service.UserService;
 import com.util.WebUtils;
 import com.validator.UserAccountValidator;
+import com.validator.UserPasswordGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.User;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -33,13 +33,17 @@ public class UserController {
 
     private final UserAccountValidator userAccountValidator;
 
+    private final UserPasswordGenerator userPasswordGenerator;
+
     @Autowired
     public UserController(UserService userService,
-                          UserAccountValidator userAccountValidator) {
+                          UserAccountValidator userAccountValidator, UserPasswordGenerator userPasswordGenerator) {
         this.userService = userService;
         this.userAccountValidator = userAccountValidator;
+        this.userPasswordGenerator = userPasswordGenerator;
     }
 
+    @SuppressWarnings("unused")
     @InitBinder
     protected void initBinder(WebDataBinder dataBinder) {
         Object target = dataBinder.getTarget();
@@ -53,7 +57,7 @@ public class UserController {
     }
 
     @GetMapping("/")
-    public String viewHome(Model model) {
+    public String viewHome() {
 
         return "home";
     }
@@ -90,7 +94,7 @@ public class UserController {
     }
 
     @GetMapping(value = "/login")
-    public String loginPage(Model model) {
+    public String loginPage() {
 
         return "login";
     }
@@ -105,6 +109,8 @@ public class UserController {
     @GetMapping(value = "/registration")
     public String viewRegister(Model model) {
         UserAccountForm form = new UserAccountForm();
+        form.setPassword(userPasswordGenerator.generatePassword());
+        form.setRepeatPassword(userPasswordGenerator.generatePassword());
 
         model.addAttribute("userAccountForm", form);
 
@@ -112,7 +118,7 @@ public class UserController {
     }
 
     @GetMapping("/registrationSuccessful")
-    public String viewRegistrationSuccessful(Model model) {
+    public String viewRegistrationSuccessful() {
         return "registrationSuccessful";
     }
 
@@ -152,8 +158,6 @@ public class UserController {
         redirectAttributes.addFlashAttribute("flashUser", newUser);
 
         userService.saveUser(newUser);
-
-        UserDetails u1 = User.withUsername(newUser.getUserName()).password(newUser.getEncrytedPassword()).roles("USER").build();
 
         return "redirect:/registrationSuccessful";
     }

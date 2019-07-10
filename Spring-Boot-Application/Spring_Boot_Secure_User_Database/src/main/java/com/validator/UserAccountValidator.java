@@ -4,25 +4,67 @@ import com.dao.UserRepository;
 import com.model.UserAccount;
 import com.model.UserAccountForm;
 import org.apache.commons.validator.routines.EmailValidator;
-import org.passay.*;
+import org.passay.CharacterRule;
+import org.passay.DictionarySubstringRule;
+import org.passay.EnglishCharacterData;
+import org.passay.LengthRule;
+import org.passay.PasswordData;
+import org.passay.PasswordValidator;
+import org.passay.RuleResult;
+import org.passay.WhitespaceRule;
 import org.passay.dictionary.ArrayWordList;
+import org.passay.dictionary.FileWordList;
+import org.passay.dictionary.WordList;
 import org.passay.dictionary.WordListDictionary;
+import org.passay.dictionary.WordLists;
 import org.passay.dictionary.sort.ArraysSort;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
 
+import javax.annotation.PostConstruct;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.RandomAccessFile;
 import java.util.Arrays;
 
 @Component
 public class UserAccountValidator implements Validator {
 
-    @Autowired
-    private UserRepository userRepository;
+    private final UserRepository userRepository;
 
-    private EmailValidator emailValidator = EmailValidator.getInstance();
+    private final EmailValidator emailValidator = EmailValidator.getInstance();
+
+    private PasswordValidator passwordValidator;
+
+    public UserAccountValidator(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+
+    @PostConstruct
+    public void initPasswordValidator() {
+        WordList wordList;
+        try {
+            wordList = WordLists.createFromReader(
+                    new FileReader[] {new FileReader(new ClassPathResource("password-list.txt").getFile())},
+                    false,
+                    new ArraysSort());
+        } catch (IOException ex) {
+            wordList = new ArrayWordList(
+                    new String[] {"password", "Password", "123456", "12345678", "admin", "geheim", "secret"},
+                    false, new ArraysSort());
+        }
+        passwordValidator = new PasswordValidator(Arrays.asList(
+                new LengthRule(8, 30),
+                new CharacterRule(EnglishCharacterData.UpperCase, 1),
+                new CharacterRule(EnglishCharacterData.LowerCase, 1),
+                new CharacterRule(EnglishCharacterData.Digit, 1),
+                new CharacterRule(EnglishCharacterData.Special, 1),
+                new WhitespaceRule(),
+                new DictionarySubstringRule(new WordListDictionary(wordList))));
+    }
 
     @Override
     public boolean supports(Class<?> clazz) {
@@ -62,11 +104,7 @@ public class UserAccountValidator implements Validator {
         }
 
         if (!errors.hasFieldErrors("password")) {
-            if (!isPasswordValid(passwordInput, errors)) {
-                String[] test = new String[2];
-                test[0] = ("de");
-                test[1] = ("de");
-            }
+            isPasswordValid(passwordInput, errors);
         }
 
         if (!errors.hasErrors()) {
@@ -76,21 +114,10 @@ public class UserAccountValidator implements Validator {
         }
     }
 
-    private boolean isPasswordValid(final String password, Errors errors) {
-        final PasswordValidator validator = new PasswordValidator(Arrays.asList(
-                new LengthRule(8, 30),
-                new CharacterRule(EnglishCharacterData.UpperCase, 1),
-                new CharacterRule(EnglishCharacterData.LowerCase, 1),
-                new CharacterRule(EnglishCharacterData.Digit, 1),
-                new CharacterRule(EnglishCharacterData.Special, 1),
-                new WhitespaceRule(),
-                new DictionaryRule(new WordListDictionary(new ArrayWordList(
-                        new String[] {"password", "Password", "123456", "12345678", "admin", "geheim", "secret"},
-                        false, new ArraysSort())))));
-        final RuleResult result = validator.validate(new PasswordData(password));
+    private void isPasswordValid(final String password, Errors errors) {
+        final RuleResult result = passwordValidator.validate(new PasswordData(password));
         for (int i = 0; i < result.getDetails().size(); i++) {
             errors.rejectValue("password", result.getDetails().get(i).getErrorCode());
         }
-        return result.isValid();
     }
 }

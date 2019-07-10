@@ -45,9 +45,9 @@ public class UserService {
     @Transactional
     public UserAccount createUser(UserAccountForm userAccountForm) {
         UUID userId = UUID.randomUUID();
-        String encrytedPassword = this.passwordEncoder.encode(userAccountForm.getPassword());
+        String encryptedPassword = this.passwordEncoder.encode(userAccountForm.getPassword());
         UserAccount user = new UserAccount(userId, userAccountForm.getUserName(), userAccountForm.getFirstName(), userAccountForm.getLastName(),
-                "USER", userAccountForm.getEmail(), encrytedPassword);
+                "USER", userAccountForm.getEmail(), encryptedPassword);
         return userRepository.save(user);
     }
 }
