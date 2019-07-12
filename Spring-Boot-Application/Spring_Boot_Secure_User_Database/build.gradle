@@ -5,6 +5,7 @@ plugins {
 	id 'java'
 	id "com.github.spotbugs" version "2.0.0"
 	id 'org.owasp.dependencycheck' version "5.0.0"
+	id "org.sonarqube" version "2.7"
 }
 
 apply plugin: 'io.spring.dependency-management'
@@ -24,13 +25,11 @@ test {
 	useJUnitPlatform()
 }
 
+
 dependencyCheck {
 	failBuildOnCVSS = 8
 	suppressionFile = file('depcheck-suppressions.xml')
-}
-
-spotbugs {
-	toolVersion = '3.1.12'
+	formats = ['XML','HTML']
 }
 
 tasks.withType(SpotBugsTask) {
