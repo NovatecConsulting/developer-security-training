@@ -70,7 +70,7 @@ Log in with the original user credentials of Bjoern (without SQL injection).
 
 ### Tips:
 
-1. **Tip:** His email is bjoern@juice-sh.op.
+1. **Tip:** His email is bjoern.kimminich@googlemail.com.
 
 2. **Tip:** Bjoern's encrypted password is not a [MD5](https://en.wikipedia.org/wiki/MD5) hash.
 
