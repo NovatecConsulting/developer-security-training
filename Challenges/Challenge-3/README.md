@@ -22,7 +22,7 @@ Get access to the account of the administrator.
 
 2. **Tip:** You don't need the matching password to solve the challenge.
 
-3. **Tip:** Try to corrupt the underlying **NoSQL** Query by inserting invalid input. For example, an apostrophe `'` might help.
+3. **Tip:** Try to corrupt the underlying **SQL** Query by inserting invalid input. For example, an apostrophe `'` might help.
 
 4. **Tip:** Have a look at the **Web Development Tool**.
 
