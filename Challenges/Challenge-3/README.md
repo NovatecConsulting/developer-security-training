@@ -29,7 +29,7 @@ Get access to the account of the administrator.
 
 ## Challenge 3.2: Modify a product review
 Modify the product reviews of the product `Apple Juice (1000 ml)` without being logged in the administrator account.  
-Change the first review with the text `One of my favorites!` written by `admin@juice-sh.op` to `Apple Juice has been hacked!` and manipulate the author so that **Jim's email** appears.
+Change the first review with the text `One of my favorites!` written by `admin@juice-sh.op` to `Apple Juice has been hacked!`.
 
 ### Tips:
 
