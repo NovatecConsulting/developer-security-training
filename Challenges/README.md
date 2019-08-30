@@ -64,3 +64,5 @@ Follow the setup instructions on https://curl.haxx.se.
 * [Challenge 3: Injection](Challenge-3/README.md)
 * [Challenge 4: Sensitive Data Exposure](Challenge-4/README.md)
 * [Challenge 5: Cross-Site Scripting (XSS)](Challenge-5/README.md)
+* [Challenge 6: Using Components With Known Vulnerabilities](Challenge-6/README.md)
+* [Challenge 7: Security Misconfiguration](Challenge-7/README.md)

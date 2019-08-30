@@ -33,6 +33,8 @@ Also, you have the opportunity to view a Spring Boot Application, which shows th
    * [Challenge 3: Injection](Challenges/Challenge-3/README.md)
    * [Challenge 4: Sensitive Data Exposure](Challenges/Challenge-4/README.md)
    * [Challenge 5: Cross-Site Scripting (XSS)](Challenges/Challenge-5/README.md)
+   * [Challenge 6: Using Components With Known Vulnerabilities](Challenges/Challenge-6/README.md)
+   * [Challenge 7: Security Misconfiguration](Challenges/Challenge-7/README.md)
 
 
 ## Useful links
