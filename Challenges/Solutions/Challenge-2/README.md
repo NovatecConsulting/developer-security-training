@@ -117,7 +117,7 @@ Inspect the source code by opening the **Web Development Tool** and selecting ta
 ![3_5_1](screenshots/solution3_5_1.png)  
 Have a look at the functions for `login` and `save`. You see, that the password is generated both times in the same way: `btoa(n.email.split("").reverse().join(""))`.  
 Researching the meaning of `btoa` will reveal that this method encodes a string in **base-64** (For example, read on https://www.w3schools.com/jsref/met_win_btoa.asp). In addition, a `reverse` function is performed on the e-mail. So, the password is created from the reversed e-mail of the user.  
-Visiting the administration section of the juice shop (described in [Challenge 1.2](https://github.com/nt-ca-aqe/developer-security-training/tree/master/Challenges/Challenge-1#challenge-12-find-the-admin-page)) shows that `bjoern.kimminich@googlemail.com` is the e-mail of Bjoern.  
-By decoding the string `moc.liamelgoog@hcinimmik.nreojb` on `http://decodebase64.com/` reveals the password: `bW9jLmxpYW1lbGdvb2dAaGNpbmltbWlrLm5yZW9qYg==`  
+Visiting the administration section of the juice shop (described in [Challenge 1.2](https://github.com/nt-ca-aqe/developer-security-training/tree/master/Challenges/Challenge-1#challenge-12-find-the-admin-page)) shows that `bjoern.kimminich@gmail.com` is the e-mail of Bjoern.  
+By decoding the string `moc.liamg@hcinimmik.nreojb` on `http://decodebase64.com/` reveals the password: `bW9jLmxpYW1nQGhjaW5pbW1pay5ucmVvamI=`  
 ![3_5_2](screenshots/solution3_5_2.png)  
 
