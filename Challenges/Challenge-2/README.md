@@ -54,7 +54,7 @@ Switch to the session of a previously logged in user without reusing his user cr
 
 
 ## Challenge 2.4: Change the password of the user account of Bender
-Change the password of the user account of Bender without using the forgot password mechanism, cracking the password hash or SQL injection. You may use SQL injection for the first login, but the final change of the password shouldn't be a result of this method.
+Change the password of the user account of Bender without using the forgot password mechanism to **slurmCl4ssic**, cracking the password hash or SQL injection. You may use SQL injection for the first login, but the final change of the password shouldn't be a result of this method.
 
 ### Tips:
 
