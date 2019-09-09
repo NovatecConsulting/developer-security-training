@@ -73,7 +73,7 @@ Submit a comment in the `Contact Us` section in the name of the administrator.
 
 
 ## Challenge 1.5: Change the description of the product "OWASP SSL Advanced Forensic Tool (O-Saft)"
-Replace the description of the product **OWASP SSL Advanced Forensic Tool (O-Saft)**. The description should only consist of the word `More...`, which links to `http://kimminich.de` (the developer of the **OWASP Juice Shop**).
+Replace the description of the product **OWASP SSL Advanced Forensic Tool (O-Saft)**. The description should only consist of the word `More...`, which links to `https://owasp.slack.com` (the developer of the **OWASP Juice Shop**).
 
 ### Tips:
 
