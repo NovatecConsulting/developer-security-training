@@ -58,7 +58,23 @@ Browse to http://localhost:3000/#/administration, open the console of the web de
 ![3_2_1_2](screenshots/solution3_2_1_2.png)  
 In the console, you will see the **GET** request `http://localhost:3000/api/Users/1` that reveals you an opportunity to interact with the **API**. Switch to tab `Response` to see the name of the parameters you have to pass:  
 ![3_2_1_1](screenshots/solution3_2_1_1.png)  
-Open **Postman**. Fill in `http://localhost:3000/api/Users` (note, that you don't pass the id `1` in this case) as **POST** request. Switch to tab `Body` and choose `JSON (application/json)`. There, you have to fill in something like `{"email": "newadmin@juice-sh.op", "password": "admin", "isAdmin": "true"}`. After sending this **POST** request, your Postman window should look like this:  
+Open **Postman**. Fill in `http://localhost:3000/api/Users` (note, that you don't pass the id `1` in this case) as **POST** request. Switch to tab `Body` and choose `JSON (application/json)`. There, you have to fill in something like:
+```json
+{
+    "email": "new_admin@novatec-gmbh.de",
+    "password": "123456",
+    "passwordRepeat": "123456",
+    "role": "admin",
+    "securityQuestion": {
+        "id": 1,
+        "question": "Your eldest siblings middle name?",
+        "createdAt": "2019-09-09T07:18:43.370Z",
+        "updatedAt": "2019-09-09T07:18:43.370Z"
+    },
+    "securityAnswer": "1"
+}
+```
+After sending this **POST** request, your Postman window should look like this:  
 ![3_2_2](screenshots/solution3_2_2.png)
 
 
