@@ -1,7 +1,5 @@
 # Challenge Collection 6: Using Components With Known Vulnerabilities 
 
-The challenges in this chapter are all about security issues of libraries or other 3rd party components the application uses internally.
-
 * [Challenge 6.1: Inform the shop about a vulnerable library it is using](#challenge-61-inform-shop-about-vulnerable-library)
    * [Tips:](#tips)
 
