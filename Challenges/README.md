@@ -26,8 +26,8 @@ Follow the setup instructions on https://github.com/bkimminich/juice-shop/blob/m
 (Installation "From Sources" or "Docker Container" recommended).
 
 ```
-docker pull bkimminich/juice-shop
-docker run --rm -p 3000:3000 bkimminich/juice-shop
+docker pull bkimminich/juice-shop:v8.5.1
+docker run --rm -p 3000:3000 bkimminich/juice-shop:v8.5.1
 ```
 
 ### Web Proxy
