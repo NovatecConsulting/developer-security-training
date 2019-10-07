@@ -1,6 +1,7 @@
 # Challenge Collection 7: Security Misconfiguration
  
-* [Challenge 7.1: Deprecated Interface](#challenge-71-Deprecated Interface)
+* [Challenge 7.1: Deprecated Interface](#challenge-71-Deprecated-Interface)
+* [Challenge 7.2: Error Handling](#challenge-72-Error-Handling)
  
 ## Challenge 7.1: Deprecated Interface
 1. log in as any user
