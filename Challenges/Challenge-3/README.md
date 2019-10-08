@@ -47,7 +47,9 @@ Modify multiple product reviews at once by changing the text of all reviews to `
 
 1. **Tip:** The process of [Challenge 3.2](#challenge-32-modify-a-product-review) might help you.
 
-2. **Tip:** You need to use a query operator to solve this challenge.
+2. **Tip:** Remember the architecture overview - Juiceshop uses MarsDB, a NodeJS MongoDB clone.
+
+3. **Tip:** You need to use a query operator to solve this challenge.
 
 
 ## Challenge 3.4: Cause the server of the juice shop to sleep for 2 seconds

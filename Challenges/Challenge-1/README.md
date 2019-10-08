@@ -45,6 +45,8 @@ Try to find this subpage!
 
 2. **Tip:** Make sure that you are a user in the **OWASP Juice Shop**
 
+3. **Information:** You cannot access this page without being an authorized user. Probably you could already guess that from the code. Note down this path for later challenges.
+
 
 ## Challenge 1.3: Show the basket of another user:
 Try to show a **basket** of a registered user of the **OWASP Juice Shop** which is not currently logged in.
@@ -67,7 +69,7 @@ Submit a comment in the `Contact Us` section in the name of the administrator.
 2. **Tip:** **Firefox Users**: The tab `Console` might help you.  
 **Chrome Users**: The tab `Elements` might help you.
 
-3. **Tip:** Search in the source after hidden input fields.
+3. **Tip:** Search in the source for hidden input fields.
 
 4. **Tip:** Think about a certain attribute you have to change in the database for modifying the author of the written comment. A search in the sources after the name of this attribute might help you.
 

@@ -28,7 +28,7 @@ Log in with the original password of the administrator without SQL injection or 
 
 
 ## Challenge 2.2: Create an administrator account
-Create an account that has all administrator rights.
+Create an account that has all administrator permissions.
 
 ### Tips:
 
@@ -54,13 +54,15 @@ Switch to the session of a previously logged in user without reusing his user cr
 
 
 ## Challenge 2.4: Change the password of the user account of Bender
+**Information:** Save this challenge for Chapter 3 - Injection.
+
 Change the password of the user account of Bender without using the forgot password mechanism, cracking the password hash or SQL injection. You may use SQL injection for the first login, but the final change of the password shouldn't be a result of this method.
 
 ### Tips:
 
 1. **Tip:** His email is bender@juice-sh.op.
 
-2. **Tip:** Inspect the HTTP calls while interacting with the `change password` mechanism.
+2. **Tip:** Inspect and adapt the HTTP calls while interacting with the `change password` mechanism.
 
 3. **Tip:** [Postman](https://www.getpostman.com/apps) will help you.
 
