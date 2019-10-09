@@ -17,7 +17,7 @@
 
 ## Challenge 5.1: Persisted XSS with Postman
 Try to perform a **persisted XSS attack** by affecting the table of the **Users** with **Postman**. Every call of the **administration section** should alert a dialog with the content `xss`.  
-To perform XSS, use iframe: <code><iframe src="javascript:alert(&grave;xss&grave;)"/></code>.
+To perform XSS, use iframe: <code><iframe src="javascript:alert(&grave;xss&grave;)"></code>.
 
 ### Tips:
 
@@ -34,7 +34,7 @@ To perform XSS, use iframe: <code><iframe src="javascript:alert(&grave;xss&grave
 
 ## Challenge 5.2: Persisted XSS with Postman (2)
 Try to perform a **persisted XSS attack** by affecting the table of the **Products** with **Postman**. Every call containing the new product should alert a dialog with the content `xss`.  
-To perform XSS, use iframe: <code><iframe src="javascript:alert(&grave;xss&grave;)"/></code>
+To perform XSS, use iframe: <code><iframe src="javascript:alert(&grave;xss&grave;)"></code>
 
 ### Tips:
 
@@ -49,7 +49,7 @@ To perform XSS, use iframe: <code><iframe src="javascript:alert(&grave;xss&grave
 
 ## Challenge 5.3: Persisted XSS through the UI
 Try to perform a **persisted XSS attack** by affecting the list of the **customer feedback**. Every call containing customer feedback should alert a dialog with the content `xss`.  
-To perform XSS, use iframe: <code><iframe src="javascript:alert(&grave;xss&grave;)"/></code>
+To perform XSS, use iframe: <code><iframe src="javascript:alert(&grave;xss&grave;)"></code>
 
 ### Tips:
 
@@ -62,7 +62,7 @@ To perform XSS, use iframe: <code><iframe src="javascript:alert(&grave;xss&grave
 
 ## Challenge 5.4: Reflected XSS
 Try to perform a **reflected XSS attack** by finding a suitable input field.  
-To perform XSS, use iframe: <code><iframe src="javascript:alert(&grave;xss&grave;)"/></code>
+To perform XSS, use iframe: <code><iframe src="javascript:alert(&grave;xss&grave;)"></code>
 
 ### Tips:
 
@@ -73,7 +73,7 @@ To perform XSS, use iframe: <code><iframe src="javascript:alert(&grave;xss&grave
 
 ## Challenge 5.5: DOM XSS
 Try to perform a **DOM-based XSS attack** by finding a suitable input field.  
-To perform XSS, use iframe: <code><iframe src="javascript:alert(&grave;xss&grave;)"/></code>
+To perform XSS, use iframe: <code><iframe src="javascript:alert(&grave;xss&grave;)"></code>
 
 ### Tips:
 
