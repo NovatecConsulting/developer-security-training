@@ -70,15 +70,15 @@ Follow the setup instructions on https://curl.haxx.se.
 
 ### The Challenges
 
-The challenges are categorized according to the OWASP Top 10 (2021) list.
+The challenges are categorized according to the [OWASP API Security Top 10 (2019)](https://github.com/OWASP/API-Security) list.
 
-* [A01: Broken Access Control](A01-Broken-Access-Control/README.md)
-* [A02: Cryptographic Failures](A02-Cryptographic-Failures/README.md)
-* [A03: Injection](A03-Injection/README.md)
-* [A04: Insecure Design](A04-Insecure-Design/README.md)
-* [A05: Security Misconfiguration](A05-Security-Misconfiguration/README.md)
-* [A06: Vulnerable and Outdated Components](A06-Vulnerable-and-Outdated-Components/README.md)
-* [A07: Identification and Authentication Failures](A07-Identification-and-Authentication-Failures/README.md)
-* [A08: Software and Data Integrity Failures](A08-Software-and-Data-Integrity-Failures/README.md)
-* [A09: Security Logging and Monitoring Failures](A09-Security-Logging-and-Monitoring-Failures/README.md)
-* [A10: Server Side Request Forgery](A10-Server-Side-Request-Forgery/README.md)
+* [API01: Broken Object Level Authorization](API01-Broken-Object-Level-Authorization/README.md)
+* [API02: Broken User Authentication](API02-Broken-User-Authentication/README.md)
+* [API03: Excessive Data Exposure](API03-Excessive-Data-Exposure/README.md)
+* [API04: Lack of Resources and Rate Limiting](API04-Lack-of-Resources-and-Rate-Limiting/README.md)
+* [API05: Broken Function Level Authorization](API05-Broken-Function-Level-Authorization/README.md)
+* [API06: Mass Assignment](API06-Mass-Assignment/README.md)
+* [API07: Security Misconfiguration](API07-Security-Misconfiguration/README.md)
+* [API08: Injection](API08-Injection/README.md)
+* [API09: Improper Assets Management](API09-Improper-Assets-Management/README.md)
+* [API10: Insufficient Logging and Monitoring](API10-Insufficient-Logging-and-Monitoring/README.md)
