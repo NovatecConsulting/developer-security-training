@@ -16,14 +16,14 @@ The first thing is to determine the protection needs of data in transit and at r
 
 ## Table of Challenges
 
-   * [Challenge 4.1: Find and open a confidential document](#challenge-41-find-and-open-a-confidential-document)
+   * [Challenge 1: Find and open a confidential document](#challenge-1-find-and-open-a-confidential-document)
       * [Tips:](#tips)
 
 **HINT:** [Install Postman](https://www.getpostman.com/apps) and [OWASP ZAP](https://github.com/zaproxy/zaproxy/wiki/Downloads) if you haven't done yet.
 
 ## Challenges
 
-### Challenge 4.1: Find and open a confidential document
+### Challenge 1: Find and open a confidential document
 
 #### Tips:
 
