@@ -19,8 +19,8 @@ Follow the setup instructions on https://github.com/juice-shop/juice-shop#setup
 (Installation using _Docker Container_ recommended).
 
 ```
-docker pull bkimminich/juice-shop:v14.2.0
-docker run --rm -p 3000:3000 bkimminich/juice-shop:v14.2.0
+docker pull bkimminich/juice-shop:v14.2.1
+docker run --rm -p 3000:3000 bkimminich/juice-shop:v14.2.1
 ```
 
 ### Web Proxy
@@ -63,3 +63,13 @@ The challenges are categorized according to the OWASP Top 10 (2021) list.
 * [A08: Software and Data Integrity Failures](A08-Software-and-Data-Integrity-Failures/README.md)
 * [A09: Security Logging and Monitoring Failures](A09-Security-Logging-and-Monitoring-Failures/README.md)
 * [A10: Server Side Request Forgery](A10-Server-Side-Request-Forgery/README.md)
+
+## Useful links
+
+* [Complete documentation about OWASP Juice Shop](https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/)
+* [The Page of the OWASP Juice Shop Project in The OWASP Foundation Wiki.](https://www.owasp.org/index.php/OWASP_Juice_Shop)
+* [The OWASP Top 10: Description of each application security risk in OWASP](https://www.owasp.org/images/7/72/OWASP_Top_10-2017_%28en%29.pdf.pdf)
+* [Postman API Development Environment](https://www.getpostman.com/downloads/)
+* [Httpie Http command line client](https://httpie.org/)
+* [Curl Http command line client](https://curl.haxx.se/)
+* [OWASP ZAP Web Security Proxy & Scanner](https://github.com/zaproxy/zaproxy/wiki/Downloads)
