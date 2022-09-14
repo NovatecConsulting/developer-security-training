@@ -33,22 +33,25 @@
 Before starting the first challenge, try to become familiar with the **OWASP Juice Shop**. Try out the functionalities in the menu bar like the `Contact Us`-Button or the `Search`-Field, have a look at the **Login Site** and **create an account** in the **OWASP Juice Shop**. After you have done the **user registration**, there might be several new functions as a logged in user which you should also try out. 
 
 ### Challenge 1: Find the Score Board with the challenge overview
+
 The **Score Board** provides an overview of all challenges in the **OWASP Juice Shop**. This subpage cannot be found by navigating through the application, because there is no direct button redirecting to the Score Board yet.  
 Try to find this secret subpage!
 
-#### Tips:
+![alt score-board](images/score-board.png "Score Board")
 
-1. **Tip:** You can try to guess the URL.
+#### Tips
 
-2. **Tip:** Have a look at the **Web Development Tools** of **Mozilla Firefox** or **Google Chrome**
+- **Tip:** You can try to guess the URL.
 
-3. **Tip:** **Firefox Users**: The tab `Debugger` --> `Sources` of the **Web Development Tool** will help you.  
+- **Tip:** Have a look at the **Web Development Tools** of **Mozilla Firefox** or **Google Chrome**
+
+- **Tip:** **Firefox Users**: The tab `Debugger` --> `Sources` of the **Web Development Tool** will help you.  
 **Google Chrome Users**: The tab `Sources` --> `Page` of the **Web Development Tool** will help you.
 
-4. **Tip:** The file `main.js` includes important information.
+- **Tip:** The file `main.js` may include useful information.
 
 
-### Challenge 2: Find the Admin Page
+### Challenge 2: Find the hidden Admin Page
 Similar to the **Score Board**, the **Admin Page** is also hidden in the application and cannot be called by clicking a certain link.  
 Try to find this subpage!
 
@@ -63,13 +66,12 @@ Try to find this subpage!
 ### Challenge 3: Show the basket of another user:
 Try to show a **basket** of a registered user of the **OWASP Juice Shop** which is not currently logged in.
 
-#### Tips:
+#### Tips
 
-1. **Tip:** While interacting with the **basket**, have a look at the HTTP calls
-
-2. **Tip:** **Firefox Users**: The tab `Storage` might help you  
-**Chrome Users**: The tab `Application` might help you
-
+- You have to be logged in with a registered user
+- While interacting with the **basket**, have a look at the HTTP calls
+- **Firefox Users**: The tab `Storage` might help you  
+- **Chrome Users**: The tab `Application` might help you
 
 ### Challenge 4: Write a comment in the name of another user:
 Submit a comment in the `Contact Us` section in the name of the administrator.
