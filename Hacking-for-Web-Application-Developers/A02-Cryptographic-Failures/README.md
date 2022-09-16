@@ -16,19 +16,19 @@ The first thing is to determine the protection needs of data in transit and at r
 
 ## Table of Challenges
 
-   * [Challenge 1: Find and open a confidential document](#challenge-1-find-and-open-a-confidential-document)
-      * [Tips:](#tips)
+   * [Challenge 1: Find and open a confidential document (Sensitive Data Exposure)](#challenge-1-find-and-open-a-confidential-document-sensitive-data-exposure)
 
-**HINT:** [Install Postman](https://www.getpostman.com/apps) and [OWASP ZAP](https://github.com/zaproxy/zaproxy/wiki/Downloads) if you haven't done yet.
+
+**HINT:** [Install Postman](https://www.getpostman.com/apps) and [OWASP ZAP](https://www.zaproxy.org/download) if you haven't done yet.
 
 ## Challenges
 
-### Challenge 1: Find and open a confidential document
+### Challenge 1: Find and open a confidential document (Sensitive Data Exposure)
 
-#### Tips:
+**Tips:**
 
-1. **Tip:** A scan of the **OWASP Juice Shop** by [OWASP ZAP](https://github.com/zaproxy/zaproxy/wiki/Downloads) might help you.
+- A scan of the **OWASP Juice Shop** by [OWASP ZAP](https://www.zaproxy.org/download) might help you.
 
-2. **Tip:** Search after hidden links to areas you haven't seen before (with **OWASP ZAP** or in the user interface).
+- Search after hidden links to areas you haven't seen before (with **OWASP ZAP** or in the user interface).
 
-3. **Tip:** Inspect the `About Us` section.
+- Inspect the `About Us` section.

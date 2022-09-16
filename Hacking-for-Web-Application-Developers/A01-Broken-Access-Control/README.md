@@ -15,15 +15,11 @@
 
    * [Prepare for the challenges:](#prepare-for-the-challenges)
    * [Challenge 1: Find the Score Board with the challenge overview](#challenge-1-find-the-score-board-with-the-challenge-overview)
-      * [Tips:](#tips)
    * [Challenge 2: Find the Admin Page](#challenge-2-find-the-admin-page)
-      * [Tips:](#tips-1)
    * [Challenge 3: Show the basket of another user:](#challenge-3-show-the-basket-of-another-user)
-      * [Tips:](#tips-2)
    * [Challenge 4: Write a comment in the name of another user:](#challenge-4-write-a-comment-in-the-name-of-another-user)
-      * [Tips:](#tips-3)
-   * [Challenge 5: Change the description of the product OWASP SSL Advanced Forensic Tool (O-Saft)](#challenge-5-change-the-description-of-the-product-owasp-ssl-advanced-forensic-tool-o-saft)
-      * [Tips:](#tips-4)
+   * [Challenge 5: Post a product review as another user or edit any user’s existing review](#challenge-5-post-a-product-review-as-another-user-or-edit-any-users-existing-review-forged-review)
+   * [Challenge 6: Change the description of the product OWASP SSL Advanced Forensic Tool (O-Saft)](#challenge-6-change-the-description-of-the-product-owasp-ssl-advanced-forensic-tool-o-saft)
 
 **HINT:** Make sure that you download [Postman](https://www.getpostman.com/apps).
 
@@ -39,34 +35,32 @@ Try to find this secret subpage!
 
 ![alt score-board](images/score-board.png "Score Board")
 
-#### Tips
+**Tips:**
 
-- **Tip:** You can try to guess the URL.
+- You can try to guess the URL.
 
-- **Tip:** Have a look at the **Web Development Tools** of **Mozilla Firefox** or **Google Chrome**
+- Have a look at the **Web Development Tools** of **Mozilla Firefox** or **Google Chrome**
 
-- **Tip:** **Firefox Users**: The tab `Debugger` --> `Sources` of the **Web Development Tool** will help you.  
-**Google Chrome Users**: The tab `Sources` --> `Page` of the **Web Development Tool** will help you.
+- **Firefox Users**: The tab `Debugger` --> `Sources` of the **Web Development Tool** will help you.  
+- **Google Chrome Users**: The tab `Sources` --> `Page` of the **Web Development Tool** will help you.
 
 - **Tip:** The file `main.js` may include useful information.
 
-
 ### Challenge 2: Find the hidden Admin Page
-Similar to the **Score Board**, the **Admin Page** is also hidden in the application and cannot be called by clicking a certain link.  
-Try to find this subpage!
+Similar to the **Score Board**, the **Admin Page** is also hidden in the application and cannot be called by clicking a certain link. Try to find this subpage!
 
-#### Tips:
+**Tips:**
 
-1. **Tip:** Have a look at the tips of [Challenge 1](#challenge-1-find-the-score-board-with-the-challenge-overview)
+- Have a look at the tips of [Challenge 1](#challenge-1-find-the-score-board-with-the-challenge-overview)
 
-2. **Tip:** Make sure that you are a user in the **OWASP Juice Shop**
+- Make sure that you are a user in the **OWASP Juice Shop**
 
-3. **Information:** You cannot access this page without being an authorized user. Probably you could already guess that from the code. Note down this path for later challenges.
+- *Information:* You cannot access this page without being an authorized user. Probably you could already guess that from the code. Note down this path for later challenges.
 
 ### Challenge 3: Show the basket of another user:
 Try to show a **basket** of a registered user of the **OWASP Juice Shop** which is not currently logged in.
 
-#### Tips
+**Tips:**
 
 - You have to be logged in with a registered user
 - While interacting with the **basket**, have a look at the HTTP calls
@@ -76,28 +70,36 @@ Try to show a **basket** of a registered user of the **OWASP Juice Shop** which 
 ### Challenge 4: Write a comment in the name of another user:
 Submit a comment in the `Contact Us` section in the name of the administrator.
 
-#### Tips:
+**Tips:**
 
-1. **Tip:** The **Web Development Tool** could help you
+- The **Web Development Tool** could help you
 
-2. **Tip:** **Firefox Users**: The tab `Console` might help you.  
+- **Firefox Users**: The tab `Console` might help you.  
 **Chrome Users**: The tab `Elements` might help you.
 
-3. **Tip:** Search in the source for hidden input fields.
+- Search in the source for hidden input fields.
 
-4. **Tip:** Think about a certain attribute you have to change in the database for modifying the author of the written comment. A search in the sources after the name of this attribute might help you.
+- Think about a certain attribute you have to change in the database for modifying the author of the written comment. A search in the sources after the name of this attribute might help you.
 
-### Challenge 5: Change the description of the product "OWASP SSL Advanced Forensic Tool (O-Saft)"
+### Challenge 5: Post a product review as another user or edit any user’s existing review (Forged Review)
+
+**Tips:**
+
+- Write a review for a product
+- Observe the Network tabs 
+
+
+### Challenge 6: Change the description of the product "OWASP SSL Advanced Forensic Tool (O-Saft)"
 Replace the description of the product **OWASP SSL Advanced Forensic Tool (O-Saft)**. The description should only consist of the word `More...`, which links to `https://owasp.slack.com` (the developer of the **OWASP Juice Shop**).
 
-#### Tips:
+**Tips:**
 
-1. **Tip:** Capture the HTTP calls in the `Console` while interacting with the product.
+- Capture the HTTP calls in the `Console` while interacting with the product.
 
-2. **Tip:** Try to find out the id of **OWASP SSL Advanced Forensic Tool (O-Saft)**.
+- Try to find out the id of **OWASP SSL Advanced Forensic Tool (O-Saft)**.
 
-3. **Tip:** Try to interact with the **API** via [Postman](https://www.getpostman.com/apps).
+- Try to interact with the **API** via [Postman](https://www.getpostman.com/apps).
 
-4. **Tip:** The sources could reveal the exact path to interact with the **API**.
+- The sources could reveal the exact path to interact with the **API**.
 
-5. **Tip:** You can solve the challenge by submitting one **PUT** request.
+- You can solve the challenge by submitting one **PUT** request.

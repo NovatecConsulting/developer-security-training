@@ -3,6 +3,9 @@
 In this hacking hands-on training, the most critical risks in web applications are presented to teach frontend and backend developers how to develop a secure web application.  
 
 After introducing the [Open Web Application Security Project Top 10 2021 (OWASP Top 10 2021)](https://owasp.org/Top10/), a selection of the application security risks listed in the OWASP Top 10 will be described step by step.  
+
+![alt owasp-top-10-2021](images/mapping_owasp_top_10_2021.png "OWASP Top 10 (2021)")
+
 Almost every security risk of the selection has its own folder with certain challenges to solve. In this challenges, the participants of the course have to find various security flaws in 
 the [OWASP Juice Shop](https://github.com/bkimminich/juice-shop), which is an intentionally vulnerable web application. 
 The descriptions of the challenges include tips to help finding the right way of hacking the application. 
