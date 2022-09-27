@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "8ffca3a0-1b0a-4ae9-9b06-85e5864b88d7",
-		"name": "crAPI Accepted",
+		"_postman_id": "b172bbfb-e902-4da9-a121-6cfa0ea84920",
+		"name": "OWASP crAPI Training Collection",
 		"description": "crAPI Training Scripts",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "0"
+		"_exporter_id": "7267364"
 	},
 	"item": [
 		{
@@ -1525,6 +1525,53 @@
 			"response": []
 		},
 		{
+			"name": "Identity Health Check",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/identity/health_check",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"identity",
+						"health_check"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Change email",
 			"event": [
 				{
@@ -1975,67 +2022,6 @@
 						"v2",
 						"user",
 						"verify-email-token"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Login",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"",
-							"pm.test(\"Status code is 200\", function () {",
-							"    pm.response.to.have.status(200);",
-							"    var jsonData = JSON.parse(responseBody);",
-							"    pm.globals.set(\"token\", jsonData.token);",
-							"    var token = pm.globals.get(\"token\");",
-							"    pm.test(\"Token is set\", function () {",
-							"        pm.expect(jsonData.token).to.eql(token);",
-							"    });",
-							"});",
-							""
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"auth": {
-					"type": "noauth"
-				},
-				"method": "POST",
-				"header": [
-					{
-						"key": "User-Agent",
-						"value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36"
-					},
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					},
-					{
-						"key": "Accept",
-						"value": "*/*"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\"email\":\"{{email}}\",\"password\":\"{{password}}\"}"
-				},
-				"url": {
-					"raw": "{{url}}/identity/api/auth/login",
-					"host": [
-						"{{url}}"
-					],
-					"path": [
-						"identity",
-						"api",
-						"auth",
-						"login"
 					]
 				}
 			},
