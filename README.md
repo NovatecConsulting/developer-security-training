@@ -2,6 +2,8 @@
 
 This repository contains alls labs and demos that are part of the security training for developers.
 
+** Please note: This is still work in progress **
+
 ## Learning targets
 1. Understand basic security terminology
 2. Understand importance of security

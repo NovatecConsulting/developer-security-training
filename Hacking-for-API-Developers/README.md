@@ -41,6 +41,24 @@ By default, gRPC uses [Protocol Buffers](https://developers.google.com/protocol-
 
 ## Setup
 
+### OWASP completely ridiculous API (crAPI)
+
+For the hacking labs we will use the [completely ridiculous API (crAPI)](https://github.com/owasp/crapi) provided by the OWASP.
+
+crAPI is a platform for vehicle owners to register and manage their vehicles. Following in the footsteps of Webgoat and JuiceShop, crAPI is an intentionally vulnerable application. In contrast to Webgoat and JuiceShop, crAPI is primarily filled with API vulnerabilities for teaching, learning, and practicing API security.
+
+You need to have docker installed on your local machine to run this application. To set this up locally just follow the quick start instructions here (if you have a recent docker version installed you may use `docker compose` instead of `docker-compose`):
+
+https://github.com/owasp/crapi#quickstart-guide
+
+After running the starting command as specified in the quickstart guide you have to wait a few minutes until all containers are reported as started or healthy.
+
+Now let's check if the web access is running by navigating to http://localhost:8888 in your web browser. Here just register yourself as a user by clicking the **Signup** button (you don't need to specify valid values here, e.g. use `example.com` as domain for mail addresses).
+
+There is also a local mail server (MailHog) available. This may be accessed by opening http://localhost:8025 in your web browser.
+
+If you have signed up before then you will see already a first mail here with a welcome message for your registered mail address.
+
 
 ### Web Proxy
 
