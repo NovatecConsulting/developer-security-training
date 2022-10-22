@@ -28,6 +28,12 @@ Just follow the instructions on
 
 ## References
 
-
+* [Cybersecurity Supply Chain Risk Management Practices for Systems and Organizations (NIST SP 800-161r1)](https://doi.org/10.6028/NIST.SP.800-161r1)
+* [Software Supply Chain Security (Synopsys)](https://www.synopsys.com/glossary/what-is-software-supply-chain-security.html)
+* [Threat Landscape for Supply Chain Attacks (European Union Agency For Cybersecurity)](https://www.enisa.europa.eu/publications/threat-landscape-for-supply-chain-attacks)
+* [What is software supply chain security and why does it matter? (GitHub)](https://github.blog/2020-09-02-secure-your-software-supply-chain-and-protect-against-supply-chain-threats-github-blog/)
+* [Supply Chain Security: Mitigating the Supply Chain Threat (Aqua Security)](https://www.aquasec.com/cloud-native-academy/supply-chain-security/supply-chain-security-mitigating-the-supply-chain-threat/)
+* [What is an SBOM? (Aqua Security)](https://www.aquasec.com/cloud-native-academy/supply-chain-security/sbom/)
+* [OWASP Software Component Verification Standard (SCVS)](https://owasp.org/www-project-software-component-verification-standard/)
 
 
