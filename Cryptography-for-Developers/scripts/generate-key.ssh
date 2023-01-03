@@ -1,0 +1,29 @@
+SERVER_ALIAS=server
+SERVER_KEYSTORE_DIR=../server/src/main/resources/config
+SERVER_KEYSTORE=$SERVER_KEYSTORE_DIR/server-keystore.p12
+SERVER_KEY_PASSWORD=server
+SERVER_STORE_PASSWORD=server
+SERVER_DN="CN=Server,OU=Server,O=test,L=Portland,S=OR,C=US"
+SERVER_CERT=server-public.cer
+
+CLIENT_ALIAS=client
+CLIENT_KEYSTORE_DIR=../client/src/main/resources/config
+CLIENT_KEYSTORE=$CLIENT_KEYSTORE_DIR/client-keystore.p12
+CLIENT_KEY_PASSWORD=client
+CLIENT_STORE_PASSWORD=client
+CLIENT_DN="CN=Client,OU=Server,O=test,L=Portland,S=OR,C=US"
+CLIENT_SERVER_CERT_ALIAS=server-public-cert
+
+# Delete existing keys
+rm -r $SERVER_KEYSTORE
+rm -r $CLIENT_KEYSTORE
+
+# Generate a server and client RSA 2048 key pairs
+keytool -genkeypair -alias $SERVER_ALIAS -keyalg RSA -keysize 2048 -dname $SERVER_DN -storetype PKCS12 -keypass $SERVER_KEY_PASSWORD -keystore $SERVER_KEYSTORE -storepass $SERVER_STORE_PASSWORD -validity 3650
+keytool -genkeypair -alias $CLIENT_ALIAS -keyalg RSA -keysize 2048 -dname $CLIENT_DN -storetype PKCS12 -keypass $CLIENT_KEY_PASSWORD -keystore $CLIENT_KEYSTORE -storepass $CLIENT_STORE_PASSWORD -validity 3650
+
+# Export public certificates for server
+keytool -exportcert -alias $SERVER_ALIAS -file $SERVER_CERT -keystore $SERVER_KEYSTORE -storepass $SERVER_STORE_PASSWORD
+
+# Import server certificate into client keystore
+keytool -importcert -keystore $CLIENT_KEYSTORE -alias $CLIENT_SERVER_CERT_ALIAS -file $SERVER_CERT -storepass $CLIENT_STORE_PASSWORD -noprompt
