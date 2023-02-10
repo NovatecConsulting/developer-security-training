@@ -8,7 +8,7 @@ In this hacking hands-on training, the most common cryptographic concepts and al
 
 #### Symmetric
 
-#### Asymmetric (Private/Public Key)
+#### Assymmetric (Private/Public Key)
 
 ### Hashing
 
