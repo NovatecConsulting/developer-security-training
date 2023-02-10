@@ -1,0 +1,12 @@
+server:
+  port: 7081
+
+client:
+  book:
+    scheme: http
+    host: localhost
+    port: 8443
+    connection-timeout: 1000
+    read-timeout: 1000
+    username: userA
+    password: passwordA
