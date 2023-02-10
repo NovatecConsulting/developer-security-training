@@ -1,0 +1,21 @@
+server:
+  port: 7081
+  ssl:
+    trust-store-type: PKCS12
+    trust-store: classpath:config/client-keystore.p12
+    trust-store-password: client
+    key-store-type: PKCS12
+    key-store: classpath:config/client-keystore.p12
+    key-password: client
+    key-store-password: client
+    key-alias: client
+
+client:
+  book:
+    scheme: https
+    host: localhost
+    port: 8443
+    connection-timeout: 1000
+    read-timeout: 1000
+    username: userA
+    password: passwordA
