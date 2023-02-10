@@ -15,7 +15,7 @@
 	<description>Demo Spring Boot client project for TLS/SSL</description>
 	<properties>
 		<java.version>11</java.version>
-		<httpclient.version>4.5.5</httpclient.version>
+		<httpclient.version>4.5.13</httpclient.version>
 		<wiremock.version>2.15.0</wiremock.version>
 	</properties>
 	<dependencies>
